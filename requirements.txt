@@ -11,6 +11,6 @@ tqdm
 opencv-python
 omegaconf
 hydra-core
-
+pydot
 
 

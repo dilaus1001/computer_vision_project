@@ -1,0 +1,16 @@
+					--- DATASET ---
+HAM10000 has 10000 training images
+	- 10,015 dermatoscopic images
+	- metadata file (CSV)
+
+DATASET LINK: https://www.kaggle.com/datasets/kmader/skin-cancer-mnist-ham10000
+
+More that 50% of the lesion are confirmed through histopathology.
+There are 7 classes of skin cancer (not perfecting balanced):
+	1. Melanocytic nevi (nv)
+	2. Melanoma (mel)
+	3. Benign keratosis-like lesion (bkl)
+	4. Basa cell carcinoma (bbc)
+	5. Actinic keratoses (akiec)
+	6. Vascular lesions (vas)
+	7. Dermatofibroma (df)
