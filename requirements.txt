@@ -6,11 +6,12 @@ matplotlib
 jupyter
 tensorflow
 torchvision
+keras
 pillow
 tqdm
 opencv-python
 omegaconf
 hydra-core
-pydot
+
 
 

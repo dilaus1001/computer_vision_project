@@ -1,0 +1,1513 @@
+2025-01-01 00:58:32,466 - INFO - Starting training with configuration: {'__module__': '__main__', 'INPUT_DIR': 'dataset/mix_dataset/categorized_images', 'OUTPUT_DIR': 'outputs', 'BALANCED_DIR': 'dataset/mix_dataset/balanced_images', 'PERFORM_BALANCING': False, 'REDUCTION_FACTOR': 2, 'BATCH_SIZE': 32, 'EPOCHS': 100, 'LEARNING_RATE': 0.001, 'NUM_WORKERS': 4, 'DEVICE': device(type='cpu'), '__dict__': <attribute '__dict__' of 'Config' objects>, '__weakref__': <attribute '__weakref__' of 'Config' objects>, '__doc__': None}
+2025-01-01 00:58:32,466 - INFO - Using device: cpu
+2025-01-01 00:58:32,466 - INFO - Skipping dataset balancing...
+2025-01-01 00:58:32,466 - INFO - Preparing datasets...
+2025-01-01 00:58:32,467 - ERROR - Error during execution: With n_samples=0, test_size=0.4 and train_size=None, the resulting train set will be empty. Adjust any of the aforementioned parameters.
+Traceback (most recent call last):
+  File "/Users/francesco/Repository/computer_vision_project/folder/main.py", line 75, in main
+    train_loader, val_loader, test_loader = prepare_datasets(
+                                            ^^^^^^^^^^^^^^^^^
+  File "/Users/francesco/Repository/computer_vision_project/folder/preprocess.py", line 106, in prepare_datasets
+    train_paths, temp_paths, train_labels, temp_labels = train_test_split(
+                                                         ^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/sklearn/utils/_param_validation.py", line 213, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/sklearn/model_selection/_split.py", line 2780, in train_test_split
+    n_train, n_test = _validate_shuffle_split(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/sklearn/model_selection/_split.py", line 2410, in _validate_shuffle_split
+    raise ValueError(
+ValueError: With n_samples=0, test_size=0.4 and train_size=None, the resulting train set will be empty. Adjust any of the aforementioned parameters.
+2025-01-01 01:00:42,252 - INFO - Starting training with configuration: {'__module__': '__main__', 'INPUT_DIR': 'dataset/mix_dataset/categorized_images', 'OUTPUT_DIR': 'outputs', 'BALANCED_DIR': 'dataset/mix_dataset/balanced_images', 'PERFORM_BALANCING': False, 'REDUCTION_FACTOR': 2, 'BATCH_SIZE': 32, 'EPOCHS': 100, 'LEARNING_RATE': 0.001, 'NUM_WORKERS': 4, 'DEVICE': device(type='cpu'), '__dict__': <attribute '__dict__' of 'Config' objects>, '__weakref__': <attribute '__weakref__' of 'Config' objects>, '__doc__': None}
+2025-01-01 01:00:42,254 - INFO - Using device: cpu
+2025-01-01 01:00:42,254 - INFO - Skipping dataset balancing...
+2025-01-01 01:00:42,254 - INFO - Preparing datasets...
+2025-01-01 01:00:42,255 - ERROR - Error during execution: With n_samples=0, test_size=0.4 and train_size=None, the resulting train set will be empty. Adjust any of the aforementioned parameters.
+Traceback (most recent call last):
+  File "/Users/francesco/Repository/computer_vision_project/folder/main.py", line 75, in main
+    train_loader, val_loader, test_loader = prepare_datasets(
+                                            ^^^^^^^^^^^^^^^^^
+  File "/Users/francesco/Repository/computer_vision_project/folder/preprocess.py", line 106, in prepare_datasets
+    train_paths, temp_paths, train_labels, temp_labels = train_test_split(
+                                                         ^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/sklearn/utils/_param_validation.py", line 213, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/sklearn/model_selection/_split.py", line 2780, in train_test_split
+    n_train, n_test = _validate_shuffle_split(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/sklearn/model_selection/_split.py", line 2410, in _validate_shuffle_split
+    raise ValueError(
+ValueError: With n_samples=0, test_size=0.4 and train_size=None, the resulting train set will be empty. Adjust any of the aforementioned parameters.
+2025-01-01 01:01:42,628 - INFO - Starting training with configuration: {'__module__': '__main__', 'INPUT_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/categorized_images', 'OUTPUT_DIR': 'outputs', 'BALANCED_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/balanced_images', 'PERFORM_BALANCING': False, 'REDUCTION_FACTOR': 2, 'BATCH_SIZE': 32, 'EPOCHS': 100, 'LEARNING_RATE': 0.001, 'NUM_WORKERS': 4, 'DEVICE': device(type='cpu'), '__dict__': <attribute '__dict__' of 'Config' objects>, '__weakref__': <attribute '__weakref__' of 'Config' objects>, '__doc__': None}
+2025-01-01 01:01:42,628 - INFO - Using device: cpu
+2025-01-01 01:01:42,628 - INFO - Skipping dataset balancing...
+2025-01-01 01:01:42,628 - INFO - Preparing datasets...
+2025-01-01 01:01:43,047 - INFO - Train dataset size: 25884
+2025-01-01 01:01:43,047 - INFO - Validation dataset size: 8628
+2025-01-01 01:01:43,047 - INFO - Test dataset size: 8628
+2025-01-01 01:01:43,057 - ERROR - Error during execution: HSwish.__init__() got an unexpected keyword argument 'inplace'
+Traceback (most recent call last):
+  File "/Users/francesco/Repository/computer_vision_project/folder/main.py", line 82, in main
+    model = MobileModel(num_classes=1).to(Config.DEVICE)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/francesco/Repository/computer_vision_project/folder/model.py", line 103, in __init__
+    Block(24, 40, kernel_size=5, stride=2, expansion_factor=4,
+  File "/Users/francesco/Repository/computer_vision_project/folder/model.py", line 50, in __init__
+    activation(inplace=True)
+TypeError: HSwish.__init__() got an unexpected keyword argument 'inplace'
+2025-01-01 01:08:59,234 - INFO - Starting training with configuration: {'__module__': '__main__', 'INPUT_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/categorized_images', 'OUTPUT_DIR': 'outputs', 'BALANCED_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/balanced_images', 'PERFORM_BALANCING': False, 'REDUCTION_FACTOR': 2, 'BATCH_SIZE': 32, 'EPOCHS': 100, 'LEARNING_RATE': 0.001, 'NUM_WORKERS': 4, 'DEVICE': device(type='cpu'), '__dict__': <attribute '__dict__' of 'Config' objects>, '__weakref__': <attribute '__weakref__' of 'Config' objects>, '__doc__': None}
+2025-01-01 01:08:59,234 - INFO - Using device: cpu
+2025-01-01 01:08:59,234 - INFO - Skipping dataset balancing...
+2025-01-01 01:08:59,234 - INFO - Preparing datasets...
+2025-01-01 01:08:59,600 - INFO - Train dataset size: 25884
+2025-01-01 01:08:59,600 - INFO - Validation dataset size: 8628
+2025-01-01 01:08:59,600 - INFO - Test dataset size: 8628
+2025-01-01 01:08:59,634 - INFO - Starting training...
+2025-01-01 01:09:11,456 - ERROR - Error during execution: Using a target size (torch.Size([32])) that is different to the input size (torch.Size([32, 1])) is deprecated. Please ensure they have the same size.
+Traceback (most recent call last):
+  File "/Users/francesco/Repository/computer_vision_project/folder/main.py", line 93, in main
+    history = train_model(
+              ^^^^^^^^^^^^
+  File "/Users/francesco/Repository/computer_vision_project/folder/train.py", line 158, in train_model
+    train_loss, train_acc = train_one_epoch(
+                            ^^^^^^^^^^^^^^^^
+  File "/Users/francesco/Repository/computer_vision_project/folder/train.py", line 65, in train_one_epoch
+    loss = criterion(outputs, targets)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/torch/nn/modules/loss.py", line 618, in forward
+    return F.binary_cross_entropy(input, target, weight=self.weight, reduction=self.reduction)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/torch/nn/functional.py", line 3145, in binary_cross_entropy
+    raise ValueError(
+ValueError: Using a target size (torch.Size([32])) that is different to the input size (torch.Size([32, 1])) is deprecated. Please ensure they have the same size.
+2025-01-01 01:14:33,691 - INFO - Starting training with configuration: {'__module__': '__main__', 'INPUT_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/categorized_images', 'OUTPUT_DIR': 'outputs', 'BALANCED_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/balanced_images', 'PERFORM_BALANCING': False, 'REDUCTION_FACTOR': 2, 'BATCH_SIZE': 32, 'EPOCHS': 10, 'LEARNING_RATE': 0.001, 'NUM_WORKERS': 4, 'DEVICE': device(type='cpu'), '__dict__': <attribute '__dict__' of 'Config' objects>, '__weakref__': <attribute '__weakref__' of 'Config' objects>, '__doc__': None}
+2025-01-01 01:14:33,691 - INFO - Using device: cpu
+2025-01-01 01:14:33,691 - INFO - Skipping dataset balancing...
+2025-01-01 01:14:33,691 - INFO - Preparing datasets...
+2025-01-01 01:14:34,029 - INFO - Train dataset size: 25884
+2025-01-01 01:14:34,030 - INFO - Validation dataset size: 8628
+2025-01-01 01:14:34,030 - INFO - Test dataset size: 8628
+2025-01-01 01:14:34,053 - INFO - Starting training...
+2025-01-01 01:15:00,574 - ERROR - Error during execution: Using a target size (torch.Size([32, 1, 1])) that is different to the input size (torch.Size([32, 1])) is deprecated. Please ensure they have the same size.
+Traceback (most recent call last):
+  File "/Users/francesco/Repository/computer_vision_project/folder/main.py", line 93, in main
+    history = train_model(
+              ^^^^^^^^^^^^
+  File "/Users/francesco/Repository/computer_vision_project/folder/train.py", line 160, in train_model
+    train_loss, train_acc = train_one_epoch(
+                            ^^^^^^^^^^^^^^^^
+  File "/Users/francesco/Repository/computer_vision_project/folder/train.py", line 66, in train_one_epoch
+    loss = criterion(outputs, targets)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/torch/nn/modules/loss.py", line 618, in forward
+    return F.binary_cross_entropy(input, target, weight=self.weight, reduction=self.reduction)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/torch/nn/functional.py", line 3145, in binary_cross_entropy
+    raise ValueError(
+ValueError: Using a target size (torch.Size([32, 1, 1])) that is different to the input size (torch.Size([32, 1])) is deprecated. Please ensure they have the same size.
+2025-01-01 01:25:42,994 - INFO - Starting training with configuration: {'__module__': '__main__', 'INPUT_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/categorized_images', 'OUTPUT_DIR': 'outputs', 'BALANCED_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/balanced_images', 'PERFORM_BALANCING': False, 'REDUCTION_FACTOR': 2, 'BATCH_SIZE': 32, 'EPOCHS': 10, 'LEARNING_RATE': 0.001, 'NUM_WORKERS': 4, 'DEVICE': device(type='cpu'), '__dict__': <attribute '__dict__' of 'Config' objects>, '__weakref__': <attribute '__weakref__' of 'Config' objects>, '__doc__': None}
+2025-01-01 01:25:42,994 - INFO - Using device: cpu
+2025-01-01 01:25:42,994 - INFO - Skipping dataset balancing...
+2025-01-01 01:25:42,994 - INFO - Preparing datasets...
+2025-01-01 01:25:43,322 - INFO - Train dataset size: 25884
+2025-01-01 01:25:43,322 - INFO - Validation dataset size: 8628
+2025-01-01 01:25:43,322 - INFO - Test dataset size: 8628
+2025-01-01 01:25:43,345 - INFO - Starting training...
+2025-01-01 01:41:26,755 - INFO - Starting training with configuration: {'__module__': '__main__', 'INPUT_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/categorized_images', 'OUTPUT_DIR': 'outputs', 'BALANCED_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/balanced_images', 'PERFORM_BALANCING': False, 'REDUCTION_FACTOR': 2, 'BATCH_SIZE': 32, 'EPOCHS': 10, 'LEARNING_RATE': 0.001, 'NUM_WORKERS': 4, 'DEVICE': device(type='cpu'), '__dict__': <attribute '__dict__' of 'Config' objects>, '__weakref__': <attribute '__weakref__' of 'Config' objects>, '__doc__': None}
+2025-01-01 01:41:26,755 - INFO - Using device: cpu
+2025-01-01 01:41:26,755 - INFO - Skipping dataset balancing...
+2025-01-01 01:41:26,755 - INFO - Preparing datasets...
+2025-01-01 01:41:27,183 - INFO - Train dataset size: 25884
+2025-01-01 01:41:27,183 - INFO - Validation dataset size: 8628
+2025-01-01 01:41:27,183 - INFO - Test dataset size: 8628
+2025-01-01 01:41:27,206 - ERROR - Error during execution: name 'Adam' is not defined
+Traceback (most recent call last):
+  File "/Users/francesco/Repository/computer_vision_project/folder/main.py", line 91, in main
+    optimizer = Adam(model.parameters(), lr=Config.LEARNING_RATE)
+                ^^^^
+NameError: name 'Adam' is not defined. Did you mean: 'AdamW'?
+2025-01-01 01:41:54,614 - INFO - Starting training with configuration: {'__module__': '__main__', 'INPUT_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/categorized_images', 'OUTPUT_DIR': 'outputs', 'BALANCED_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/balanced_images', 'PERFORM_BALANCING': False, 'REDUCTION_FACTOR': 2, 'BATCH_SIZE': 32, 'EPOCHS': 10, 'LEARNING_RATE': 0.001, 'NUM_WORKERS': 4, 'DEVICE': device(type='cpu'), '__dict__': <attribute '__dict__' of 'Config' objects>, '__weakref__': <attribute '__weakref__' of 'Config' objects>, '__doc__': None}
+2025-01-01 01:41:54,614 - INFO - Using device: cpu
+2025-01-01 01:41:54,614 - INFO - Skipping dataset balancing...
+2025-01-01 01:41:54,614 - INFO - Preparing datasets...
+2025-01-01 01:41:54,959 - INFO - Train dataset size: 25884
+2025-01-01 01:41:54,959 - INFO - Validation dataset size: 8628
+2025-01-01 01:41:54,959 - INFO - Test dataset size: 8628
+2025-01-01 01:41:54,982 - INFO - Starting training...
+2025-01-01 01:55:09,100 - INFO - Starting training with configuration: {'__module__': '__main__', 'INPUT_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/categorized_images', 'OUTPUT_DIR': 'outputs', 'BALANCED_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/balanced_images', 'PERFORM_BALANCING': False, 'REDUCTION_FACTOR': 2, 'BATCH_SIZE': 32, 'EPOCHS': 10, 'LEARNING_RATE': 0.001, 'NUM_WORKERS': 10, 'DEVICE': device(type='cpu'), '__dict__': <attribute '__dict__' of 'Config' objects>, '__weakref__': <attribute '__weakref__' of 'Config' objects>, '__doc__': None}
+2025-01-01 01:55:09,100 - INFO - Using device: cpu
+2025-01-01 01:55:09,100 - INFO - Skipping dataset balancing...
+2025-01-01 01:55:09,100 - INFO - Preparing datasets...
+2025-01-01 01:55:09,537 - INFO - Train dataset size: 25884
+2025-01-01 01:55:09,537 - INFO - Validation dataset size: 8628
+2025-01-01 01:55:09,537 - INFO - Test dataset size: 8628
+2025-01-01 01:55:09,560 - INFO - Starting training...
+2025-01-01 01:56:13,419 - INFO - Starting training with configuration: {'__module__': '__main__', 'INPUT_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/categorized_images', 'OUTPUT_DIR': 'outputs', 'BALANCED_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/balanced_images', 'PERFORM_BALANCING': False, 'REDUCTION_FACTOR': 2, 'BATCH_SIZE': 32, 'EPOCHS': 10, 'LEARNING_RATE': 0.001, 'NUM_WORKERS': 2, 'DEVICE': device(type='cpu'), '__dict__': <attribute '__dict__' of 'Config' objects>, '__weakref__': <attribute '__weakref__' of 'Config' objects>, '__doc__': None}
+2025-01-01 01:56:13,419 - INFO - Using device: cpu
+2025-01-01 01:56:13,419 - INFO - Skipping dataset balancing...
+2025-01-01 01:56:13,419 - INFO - Preparing datasets...
+2025-01-01 01:56:13,741 - INFO - Train dataset size: 25884
+2025-01-01 01:56:13,741 - INFO - Validation dataset size: 8628
+2025-01-01 01:56:13,741 - INFO - Test dataset size: 8628
+2025-01-01 01:56:13,765 - INFO - Starting training...
+2025-01-01 01:57:09,437 - INFO - Starting training with configuration: {'__module__': '__main__', 'INPUT_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/categorized_images', 'OUTPUT_DIR': 'outputs', 'BALANCED_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/balanced_images', 'PERFORM_BALANCING': False, 'REDUCTION_FACTOR': 2, 'BATCH_SIZE': 32, 'EPOCHS': 10, 'LEARNING_RATE': 0.001, 'NUM_WORKERS': 8, 'DEVICE': device(type='cpu'), '__dict__': <attribute '__dict__' of 'Config' objects>, '__weakref__': <attribute '__weakref__' of 'Config' objects>, '__doc__': None}
+2025-01-01 01:57:09,437 - INFO - Using device: cpu
+2025-01-01 01:57:09,437 - INFO - Skipping dataset balancing...
+2025-01-01 01:57:09,437 - INFO - Preparing datasets...
+2025-01-01 01:57:09,784 - INFO - Train dataset size: 25884
+2025-01-01 01:57:09,785 - INFO - Validation dataset size: 8628
+2025-01-01 01:57:09,785 - INFO - Test dataset size: 8628
+2025-01-01 01:57:09,808 - INFO - Starting training...
+2025-01-01 02:06:40,686 - INFO - Starting training with configuration: {'__module__': '__main__', 'INPUT_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/categorized_images', 'OUTPUT_DIR': 'outputs', 'BALANCED_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/balanced_images', 'PERFORM_BALANCING': False, 'REDUCTION_FACTOR': 2, 'BATCH_SIZE': 32, 'EPOCHS': 10, 'LEARNING_RATE': 0.001, 'NUM_WORKERS': 4, 'DEVICE': device(type='cpu'), '__dict__': <attribute '__dict__' of 'Config' objects>, '__weakref__': <attribute '__weakref__' of 'Config' objects>, '__doc__': None}
+2025-01-01 02:06:40,686 - INFO - Using device: cpu
+2025-01-01 02:06:40,686 - INFO - Skipping dataset balancing...
+2025-01-01 02:06:40,686 - INFO - Preparing datasets...
+2025-01-01 02:06:56,438 - ERROR - Error during execution: object of type 'SkinLesionDataset' has no len()
+Traceback (most recent call last):
+  File "/Users/francesco/Repository/computer_vision_project/folder/main.py", line 77, in main
+    train_loader, val_loader, test_loader = prepare_datasets(
+                                            ^^^^^^^^^^^^^^^^^
+  File "/Users/francesco/Repository/computer_vision_project/folder/preprocess.py", line 135, in prepare_datasets
+    train_loader = DataLoader(
+                   ^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 350, in __init__
+    sampler = RandomSampler(dataset, generator=generator)  # type: ignore[arg-type]
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/torch/utils/data/sampler.py", line 142, in __init__
+    if not isinstance(self.num_samples, int) or self.num_samples <= 0:
+                      ^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/torch/utils/data/sampler.py", line 149, in num_samples
+    return len(self.data_source)
+           ^^^^^^^^^^^^^^^^^^^^^
+TypeError: object of type 'SkinLesionDataset' has no len()
+2025-01-01 02:08:26,676 - INFO - Starting training with configuration: {'__module__': '__main__', 'INPUT_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/categorized_images', 'OUTPUT_DIR': 'outputs', 'BALANCED_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/balanced_images', 'PERFORM_BALANCING': False, 'REDUCTION_FACTOR': 2, 'BATCH_SIZE': 32, 'EPOCHS': 10, 'LEARNING_RATE': 0.001, 'NUM_WORKERS': 4, 'DEVICE': device(type='cpu'), '__dict__': <attribute '__dict__' of 'Config' objects>, '__weakref__': <attribute '__weakref__' of 'Config' objects>, '__doc__': None}
+2025-01-01 02:08:26,676 - INFO - Using device: cpu
+2025-01-01 02:08:26,676 - INFO - Skipping dataset balancing...
+2025-01-01 02:08:26,677 - INFO - Preparing datasets...
+2025-01-01 02:08:38,825 - ERROR - Error during execution: object of type 'SkinLesionDataset' has no len()
+Traceback (most recent call last):
+  File "/Users/francesco/Repository/computer_vision_project/folder/main.py", line 77, in main
+    train_loader, val_loader, test_loader = prepare_datasets(
+                                            ^^^^^^^^^^^^^^^^^
+  File "/Users/francesco/Repository/computer_vision_project/folder/preprocess.py", line 135, in prepare_datasets
+    train_loader = DataLoader(
+                   ^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 350, in __init__
+    sampler = RandomSampler(dataset, generator=generator)  # type: ignore[arg-type]
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/torch/utils/data/sampler.py", line 142, in __init__
+    if not isinstance(self.num_samples, int) or self.num_samples <= 0:
+                      ^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/torch/utils/data/sampler.py", line 149, in num_samples
+    return len(self.data_source)
+           ^^^^^^^^^^^^^^^^^^^^^
+TypeError: object of type 'SkinLesionDataset' has no len()
+2025-01-01 02:11:25,038 - INFO - Starting training with configuration: {'__module__': '__main__', 'INPUT_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/categorized_images', 'OUTPUT_DIR': 'outputs', 'BALANCED_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/balanced_images', 'PERFORM_BALANCING': False, 'REDUCTION_FACTOR': 2, 'BATCH_SIZE': 32, 'EPOCHS': 10, 'LEARNING_RATE': 0.001, 'NUM_WORKERS': 4, 'DEVICE': device(type='cpu'), '__dict__': <attribute '__dict__' of 'Config' objects>, '__weakref__': <attribute '__weakref__' of 'Config' objects>, '__doc__': None}
+2025-01-01 02:11:25,038 - INFO - Using device: cpu
+2025-01-01 02:11:25,038 - INFO - Skipping dataset balancing...
+2025-01-01 02:11:25,038 - INFO - Preparing datasets...
+2025-01-01 02:11:36,829 - INFO - Train dataset size: 25884
+2025-01-01 02:11:36,829 - INFO - Validation dataset size: 8628
+2025-01-01 02:11:36,829 - INFO - Test dataset size: 8628
+2025-01-01 02:11:36,852 - INFO - Starting training...
+2025-01-01 02:13:34,320 - INFO - Starting training with configuration: {'__module__': '__main__', 'INPUT_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/categorized_images', 'OUTPUT_DIR': 'outputs', 'BALANCED_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/balanced_images', 'PERFORM_BALANCING': False, 'REDUCTION_FACTOR': 2, 'BATCH_SIZE': 128, 'EPOCHS': 10, 'LEARNING_RATE': 0.001, 'NUM_WORKERS': 4, 'DEVICE': device(type='cpu'), '__dict__': <attribute '__dict__' of 'Config' objects>, '__weakref__': <attribute '__weakref__' of 'Config' objects>, '__doc__': None}
+2025-01-01 02:13:34,320 - INFO - Using device: cpu
+2025-01-01 02:13:34,320 - INFO - Skipping dataset balancing...
+2025-01-01 02:13:34,320 - INFO - Preparing datasets...
+2025-01-01 02:13:49,974 - INFO - Train dataset size: 25884
+2025-01-01 02:13:49,974 - INFO - Validation dataset size: 8628
+2025-01-01 02:13:49,974 - INFO - Test dataset size: 8628
+2025-01-01 02:13:49,997 - INFO - Starting training...
+2025-01-01 02:49:01,611 - ERROR - Error during execution: Caught TypeError in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/torch/utils/data/_utils/worker.py", line 308, in _worker_loop
+    data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/torch/utils/data/_utils/fetch.py", line 51, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+            ~~~~~~~~~~~~^^^^^
+  File "/Users/francesco/Repository/computer_vision_project/folder/preprocess.py", line 33, in __getitem__
+    img = self.transform(img)
+          ^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/torchvision/transforms/transforms.py", line 95, in __call__
+    img = t(img)
+          ^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/torchvision/transforms/transforms.py", line 137, in __call__
+    return F.to_tensor(pic)
+           ^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/torchvision/transforms/functional.py", line 142, in to_tensor
+    raise TypeError(f"pic should be PIL Image or ndarray. Got {type(pic)}")
+TypeError: pic should be PIL Image or ndarray. Got <class 'torch.Tensor'>
+Traceback (most recent call last):
+  File "/Users/francesco/Repository/computer_vision_project/folder/main.py", line 96, in main
+    history = train_model(
+              ^^^^^^^^^^^^
+  File "/Users/francesco/Repository/computer_vision_project/folder/train.py", line 165, in train_model
+    val_loss, val_acc = validate(model, val_loader, criterion, device)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/francesco/Repository/computer_vision_project/folder/train.py", line 91, in validate
+    for inputs, targets in progress_bar:
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/tqdm/std.py", line 1181, in __iter__
+    for obj in iterable:
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 631, in __next__
+    data = self._next_data()
+           ^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 1346, in _next_data
+    return self._process_data(data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 1372, in _process_data
+    data.reraise()
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/torch/_utils.py", line 705, in reraise
+    raise exception
+TypeError: Caught TypeError in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/torch/utils/data/_utils/worker.py", line 308, in _worker_loop
+    data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/torch/utils/data/_utils/fetch.py", line 51, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+            ~~~~~~~~~~~~^^^^^
+  File "/Users/francesco/Repository/computer_vision_project/folder/preprocess.py", line 33, in __getitem__
+    img = self.transform(img)
+          ^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/torchvision/transforms/transforms.py", line 95, in __call__
+    img = t(img)
+          ^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/torchvision/transforms/transforms.py", line 137, in __call__
+    return F.to_tensor(pic)
+           ^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/torchvision/transforms/functional.py", line 142, in to_tensor
+    raise TypeError(f"pic should be PIL Image or ndarray. Got {type(pic)}")
+TypeError: pic should be PIL Image or ndarray. Got <class 'torch.Tensor'>
+
+2025-01-01 02:55:42,480 - INFO - Starting training with configuration: {'__module__': '__main__', 'INPUT_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/categorized_images', 'OUTPUT_DIR': 'outputs', 'BALANCED_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/balanced_images', 'PERFORM_BALANCING': False, 'REDUCTION_FACTOR': 2, 'BATCH_SIZE': 128, 'EPOCHS': 10, 'LEARNING_RATE': 0.001, 'NUM_WORKERS': 4, 'DEVICE': device(type='cpu'), '__dict__': <attribute '__dict__' of 'Config' objects>, '__weakref__': <attribute '__weakref__' of 'Config' objects>, '__doc__': None}
+2025-01-01 02:55:42,481 - INFO - Using device: cpu
+2025-01-01 02:55:42,481 - INFO - Skipping dataset balancing...
+2025-01-01 02:55:42,482 - INFO - Preparing datasets...
+2025-01-01 02:55:58,193 - INFO - Train dataset size: 25884
+2025-01-01 02:55:58,193 - INFO - Validation dataset size: 8628
+2025-01-01 02:55:58,193 - INFO - Test dataset size: 8628
+2025-01-01 02:55:58,216 - INFO - Starting training...
+2025-01-01 02:56:11,905 - ERROR - Error during execution: Caught TypeError in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/PIL/Image.py", line 3130, in fromarray
+    mode, rawmode = _fromarray_typemap[typekey]
+                    ~~~~~~~~~~~~~~~~~~^^^^^^^^^
+KeyError: ((1, 1, 224), '|u1')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/torch/utils/data/_utils/worker.py", line 308, in _worker_loop
+    data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/torch/utils/data/_utils/fetch.py", line 51, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+            ~~~~~~~~~~~~^^^^^
+  File "/Users/francesco/Repository/computer_vision_project/folder/preprocess.py", line 33, in __getitem__
+    img = Image.fromarray(img.numpy())  # Convert tensor to numpy, then to PIL image
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/PIL/Image.py", line 3134, in fromarray
+    raise TypeError(msg) from e
+TypeError: Cannot handle this data type: (1, 1, 224), |u1
+Traceback (most recent call last):
+  File "/Users/francesco/Repository/computer_vision_project/folder/main.py", line 96, in main
+    history = train_model(
+              ^^^^^^^^^^^^
+  File "/Users/francesco/Repository/computer_vision_project/folder/train.py", line 160, in train_model
+    train_loss, train_acc = train_one_epoch(
+                            ^^^^^^^^^^^^^^^^
+  File "/Users/francesco/Repository/computer_vision_project/folder/train.py", line 57, in train_one_epoch
+    for inputs, targets in progress_bar:
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/tqdm/std.py", line 1181, in __iter__
+    for obj in iterable:
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 631, in __next__
+    data = self._next_data()
+           ^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 1346, in _next_data
+    return self._process_data(data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 1372, in _process_data
+    data.reraise()
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/torch/_utils.py", line 705, in reraise
+    raise exception
+TypeError: Caught TypeError in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/PIL/Image.py", line 3130, in fromarray
+    mode, rawmode = _fromarray_typemap[typekey]
+                    ~~~~~~~~~~~~~~~~~~^^^^^^^^^
+KeyError: ((1, 1, 224), '|u1')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/torch/utils/data/_utils/worker.py", line 308, in _worker_loop
+    data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/torch/utils/data/_utils/fetch.py", line 51, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+            ~~~~~~~~~~~~^^^^^
+  File "/Users/francesco/Repository/computer_vision_project/folder/preprocess.py", line 33, in __getitem__
+    img = Image.fromarray(img.numpy())  # Convert tensor to numpy, then to PIL image
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/PIL/Image.py", line 3134, in fromarray
+    raise TypeError(msg) from e
+TypeError: Cannot handle this data type: (1, 1, 224), |u1
+
+2025-01-01 19:02:35,643 - INFO - Starting training with configuration: {'__module__': '__main__', 'INPUT_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/categorized_images', 'OUTPUT_DIR': 'outputs', 'BALANCED_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/balanced_images', 'PERFORM_BALANCING': False, 'REDUCTION_FACTOR': 2, 'BATCH_SIZE': 128, 'EPOCHS': 10, 'LEARNING_RATE': 0.001, 'NUM_WORKERS': 4, 'DEVICE': device(type='cpu'), '__dict__': <attribute '__dict__' of 'Config' objects>, '__weakref__': <attribute '__weakref__' of 'Config' objects>, '__doc__': None}
+2025-01-01 19:02:35,643 - INFO - Using device: cpu
+2025-01-01 19:02:35,643 - INFO - Skipping dataset balancing...
+2025-01-01 19:02:35,643 - INFO - Preparing datasets...
+2025-01-01 19:02:52,224 - INFO - Train dataset size: 25884
+2025-01-01 19:02:52,225 - INFO - Validation dataset size: 8628
+2025-01-01 19:02:52,225 - INFO - Test dataset size: 8628
+2025-01-01 19:02:52,269 - INFO - Starting training...
+2025-01-01 19:03:07,401 - ERROR - Error during execution: Caught TypeError in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/PIL/Image.py", line 3130, in fromarray
+    mode, rawmode = _fromarray_typemap[typekey]
+                    ~~~~~~~~~~~~~~~~~~^^^^^^^^^
+KeyError: ((1, 1, 224), '|u1')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/torch/utils/data/_utils/worker.py", line 308, in _worker_loop
+    data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/torch/utils/data/_utils/fetch.py", line 51, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+            ~~~~~~~~~~~~^^^^^
+  File "/Users/francesco/Repository/computer_vision_project/folder/preprocess.py", line 33, in __getitem__
+    img = Image.fromarray(img.numpy())  # Convert tensor to numpy, then to PIL image
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/PIL/Image.py", line 3134, in fromarray
+    raise TypeError(msg) from e
+TypeError: Cannot handle this data type: (1, 1, 224), |u1
+Traceback (most recent call last):
+  File "/Users/francesco/Repository/computer_vision_project/folder/main.py", line 96, in main
+    history = train_model(
+              ^^^^^^^^^^^^
+  File "/Users/francesco/Repository/computer_vision_project/folder/train.py", line 160, in train_model
+    train_loss, train_acc = train_one_epoch(
+                            ^^^^^^^^^^^^^^^^
+  File "/Users/francesco/Repository/computer_vision_project/folder/train.py", line 57, in train_one_epoch
+    for inputs, targets in progress_bar:
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/tqdm/std.py", line 1181, in __iter__
+    for obj in iterable:
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 631, in __next__
+    data = self._next_data()
+           ^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 1346, in _next_data
+    return self._process_data(data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 1372, in _process_data
+    data.reraise()
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/torch/_utils.py", line 705, in reraise
+    raise exception
+TypeError: Caught TypeError in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/PIL/Image.py", line 3130, in fromarray
+    mode, rawmode = _fromarray_typemap[typekey]
+                    ~~~~~~~~~~~~~~~~~~^^^^^^^^^
+KeyError: ((1, 1, 224), '|u1')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/torch/utils/data/_utils/worker.py", line 308, in _worker_loop
+    data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/torch/utils/data/_utils/fetch.py", line 51, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+            ~~~~~~~~~~~~^^^^^
+  File "/Users/francesco/Repository/computer_vision_project/folder/preprocess.py", line 33, in __getitem__
+    img = Image.fromarray(img.numpy())  # Convert tensor to numpy, then to PIL image
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/PIL/Image.py", line 3134, in fromarray
+    raise TypeError(msg) from e
+TypeError: Cannot handle this data type: (1, 1, 224), |u1
+
+2025-01-01 19:14:54,980 - INFO - Starting training with configuration: {'__module__': '__main__', 'INPUT_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/categorized_images', 'OUTPUT_DIR': 'outputs', 'BALANCED_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/balanced_images', 'PERFORM_BALANCING': False, 'REDUCTION_FACTOR': 2, 'BATCH_SIZE': 128, 'EPOCHS': 10, 'LEARNING_RATE': 0.001, 'NUM_WORKERS': 4, 'DEVICE': device(type='cpu'), '__dict__': <attribute '__dict__' of 'Config' objects>, '__weakref__': <attribute '__weakref__' of 'Config' objects>, '__doc__': None}
+2025-01-01 19:14:54,980 - INFO - Using device: cpu
+2025-01-01 19:14:54,980 - INFO - Skipping dataset balancing...
+2025-01-01 19:14:54,980 - INFO - Preparing datasets...
+2025-01-01 19:14:55,319 - INFO - Train dataset size: 25884
+2025-01-01 19:14:55,319 - INFO - Validation dataset size: 8628
+2025-01-01 19:14:55,319 - INFO - Test dataset size: 8628
+2025-01-01 19:14:55,343 - INFO - Starting training...
+2025-01-01 19:15:51,386 - INFO - Starting training with configuration: {'__module__': '__main__', 'INPUT_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/categorized_images', 'OUTPUT_DIR': 'outputs', 'BALANCED_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/balanced_images', 'PERFORM_BALANCING': False, 'REDUCTION_FACTOR': 2, 'BATCH_SIZE': 128, 'EPOCHS': 10, 'LEARNING_RATE': 0.001, 'NUM_WORKERS': 4, 'DEVICE': device(type='cpu'), '__dict__': <attribute '__dict__' of 'Config' objects>, '__weakref__': <attribute '__weakref__' of 'Config' objects>, '__doc__': None}
+2025-01-01 19:15:51,386 - INFO - Using device: cpu
+2025-01-01 19:15:51,386 - INFO - Skipping dataset balancing...
+2025-01-01 19:15:51,386 - INFO - Preparing datasets...
+2025-01-01 19:15:51,725 - INFO - Train dataset size: 25884
+2025-01-01 19:15:51,725 - INFO - Validation dataset size: 8628
+2025-01-01 19:15:51,725 - INFO - Test dataset size: 8628
+2025-01-01 19:15:51,748 - INFO - Starting training...
+2025-01-01 19:16:47,403 - INFO - Starting training with configuration: {'__module__': '__main__', 'INPUT_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/categorized_images', 'OUTPUT_DIR': 'outputs', 'BALANCED_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/balanced_images', 'PERFORM_BALANCING': True, 'REDUCTION_FACTOR': 2, 'BATCH_SIZE': 64, 'EPOCHS': 10, 'LEARNING_RATE': 0.001, 'NUM_WORKERS': 4, 'DEVICE': device(type='cpu'), '__dict__': <attribute '__dict__' of 'Config' objects>, '__weakref__': <attribute '__weakref__' of 'Config' objects>, '__doc__': None}
+2025-01-01 19:16:47,403 - INFO - Using device: cpu
+2025-01-01 19:16:47,403 - INFO - Resampling and balancing dataset...
+2025-01-01 19:16:49,719 - INFO - Number of images in malignant: 10599
+2025-01-01 19:17:05,998 - INFO - Resampled and resized 10599 images for malignant
+2025-01-01 19:17:06,018 - INFO - Number of images in benign: 32541
+2025-01-01 19:17:30,817 - INFO - Resampled and resized 16270 images for benign
+2025-01-01 19:17:30,834 - INFO - Total images after resampling: 26869
+2025-01-01 19:17:30,834 - INFO - Preparing datasets...
+2025-01-01 19:17:31,028 - INFO - Train dataset size: 16121
+2025-01-01 19:17:31,028 - INFO - Validation dataset size: 5374
+2025-01-01 19:17:31,028 - INFO - Test dataset size: 5374
+2025-01-01 19:17:31,051 - INFO - Starting training...
+2025-01-01 19:49:45,917 - INFO - Starting training with configuration: {'__module__': '__main__', 'INPUT_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/categorized_images', 'OUTPUT_DIR': 'outputs', 'BALANCED_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/balanced_images', 'PERFORM_BALANCING': True, 'REDUCTION_FACTOR': 2, 'BATCH_SIZE': 64, 'EPOCHS': 10, 'LEARNING_RATE': 0.001, 'NUM_WORKERS': 4, 'DEVICE': device(type='cpu'), '__dict__': <attribute '__dict__' of 'Config' objects>, '__weakref__': <attribute '__weakref__' of 'Config' objects>, '__doc__': None}
+2025-01-01 19:49:45,917 - INFO - Using device: cpu
+2025-01-01 19:49:45,917 - INFO - Resampling and balancing dataset...
+2025-01-01 19:49:47,900 - INFO - Number of images in malignant: 10599
+2025-01-01 19:50:04,599 - INFO - Resampled and resized 10599 images for malignant
+2025-01-01 19:50:04,706 - INFO - Number of images in benign: 32541
+2025-01-01 19:50:30,267 - INFO - Resampled and resized 16270 images for benign
+2025-01-01 19:50:30,284 - INFO - Total images after resampling: 26869
+2025-01-01 19:50:30,284 - INFO - Preparing datasets...
+2025-01-01 19:50:30,482 - INFO - Train dataset size: 16121
+2025-01-01 19:50:30,482 - INFO - Validation dataset size: 5374
+2025-01-01 19:50:30,482 - INFO - Test dataset size: 5374
+2025-01-01 19:50:30,504 - ERROR - Error during execution: Dynamo is not supported on Python 3.12+
+Traceback (most recent call last):
+  File "/Users/francesco/Repository/computer_vision_project/folder/main.py", line 86, in main
+    model = torch.compile(model)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/torch/__init__.py", line 1868, in compile
+    raise RuntimeError("Dynamo is not supported on Python 3.12+")
+RuntimeError: Dynamo is not supported on Python 3.12+
+2025-01-01 20:48:39,221 - INFO - Starting training with configuration: {'__module__': '__main__', 'INPUT_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/categorized_images', 'OUTPUT_DIR': 'outputs', 'BALANCED_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/balanced_images', 'PERFORM_BALANCING': True, 'COMPUTE_STATISTICS': True, 'REDUCTION_FACTOR': 2, 'BATCH_SIZE': 64, 'EPOCHS': 10, 'LEARNING_RATE': 0.001, 'NUM_WORKERS': 4, 'DEVICE': device(type='cpu'), '__dict__': <attribute '__dict__' of 'Config' objects>, '__weakref__': <attribute '__weakref__' of 'Config' objects>, '__doc__': None}
+2025-01-01 20:48:39,221 - INFO - Using device: cpu
+2025-01-01 20:48:39,221 - INFO - Resampling and balancing dataset...
+2025-01-01 20:48:41,222 - INFO - Number of images in malignant: 10599
+2025-01-01 20:48:56,239 - INFO - Resampled and resized 10599 images for malignant
+2025-01-01 20:48:56,356 - INFO - Number of images in benign: 32541
+2025-01-01 20:49:19,329 - INFO - Resampled and resized 16270 images for benign
+2025-01-01 20:49:19,345 - INFO - Total images after resampling: 26869
+2025-01-01 20:49:19,345 - INFO - Computing dataset statistics...
+2025-01-01 20:49:19,380 - WARNING - Error processing /: unable to mmap 640 bytes from file </>: Invalid argument (22)
+2025-01-01 20:49:19,381 - WARNING - Error processing U: [Errno 2] No such file or directory: 'U'
+2025-01-01 20:49:19,382 - WARNING - Error processing s: [Errno 2] No such file or directory: 's'
+2025-01-01 20:49:19,383 - WARNING - Error processing e: [Errno 2] No such file or directory: 'e'
+2025-01-01 20:49:19,384 - WARNING - Error processing r: [Errno 2] No such file or directory: 'r'
+2025-01-01 20:49:19,385 - WARNING - Error processing s: [Errno 2] No such file or directory: 's'
+2025-01-01 20:49:19,388 - WARNING - Error processing /: unable to mmap 640 bytes from file </>: Invalid argument (22)
+2025-01-01 20:49:19,389 - WARNING - Error processing f: [Errno 2] No such file or directory: 'f'
+2025-01-01 20:49:19,390 - WARNING - Error processing r: [Errno 2] No such file or directory: 'r'
+2025-01-01 20:49:19,391 - WARNING - Error processing a: [Errno 2] No such file or directory: 'a'
+2025-01-01 20:49:19,392 - WARNING - Error processing n: [Errno 2] No such file or directory: 'n'
+2025-01-01 20:49:19,393 - WARNING - Error processing c: [Errno 2] No such file or directory: 'c'
+2025-01-01 20:49:19,394 - WARNING - Error processing e: [Errno 2] No such file or directory: 'e'
+2025-01-01 20:49:19,394 - WARNING - Error processing s: [Errno 2] No such file or directory: 's'
+2025-01-01 20:49:19,395 - WARNING - Error processing c: [Errno 2] No such file or directory: 'c'
+2025-01-01 20:49:19,396 - WARNING - Error processing o: [Errno 2] No such file or directory: 'o'
+2025-01-01 20:49:19,399 - WARNING - Error processing /: unable to mmap 640 bytes from file </>: Invalid argument (22)
+2025-01-01 20:49:19,400 - WARNING - Error processing R: [Errno 2] No such file or directory: 'R'
+2025-01-01 20:49:19,401 - WARNING - Error processing e: [Errno 2] No such file or directory: 'e'
+2025-01-01 20:49:19,402 - WARNING - Error processing p: [Errno 2] No such file or directory: 'p'
+2025-01-01 20:49:19,403 - WARNING - Error processing o: [Errno 2] No such file or directory: 'o'
+2025-01-01 20:49:19,404 - WARNING - Error processing s: [Errno 2] No such file or directory: 's'
+2025-01-01 20:49:19,404 - WARNING - Error processing i: [Errno 2] No such file or directory: 'i'
+2025-01-01 20:49:19,405 - WARNING - Error processing t: [Errno 2] No such file or directory: 't'
+2025-01-01 20:49:19,406 - WARNING - Error processing o: [Errno 2] No such file or directory: 'o'
+2025-01-01 20:49:19,407 - WARNING - Error processing r: [Errno 2] No such file or directory: 'r'
+2025-01-01 20:49:19,408 - WARNING - Error processing y: [Errno 2] No such file or directory: 'y'
+2025-01-01 20:49:19,411 - WARNING - Error processing /: unable to mmap 640 bytes from file </>: Invalid argument (22)
+2025-01-01 20:49:19,412 - WARNING - Error processing c: [Errno 2] No such file or directory: 'c'
+2025-01-01 20:49:19,413 - WARNING - Error processing o: [Errno 2] No such file or directory: 'o'
+2025-01-01 20:49:19,413 - WARNING - Error processing m: [Errno 2] No such file or directory: 'm'
+2025-01-01 20:49:19,414 - WARNING - Error processing p: [Errno 2] No such file or directory: 'p'
+2025-01-01 20:49:19,415 - WARNING - Error processing u: [Errno 2] No such file or directory: 'u'
+2025-01-01 20:49:19,416 - WARNING - Error processing t: [Errno 2] No such file or directory: 't'
+2025-01-01 20:49:19,417 - WARNING - Error processing e: [Errno 2] No such file or directory: 'e'
+2025-01-01 20:49:19,418 - WARNING - Error processing r: [Errno 2] No such file or directory: 'r'
+2025-01-01 20:49:19,419 - WARNING - Error processing _: [Errno 2] No such file or directory: '_'
+2025-01-01 20:49:19,420 - WARNING - Error processing v: [Errno 2] No such file or directory: 'v'
+2025-01-01 20:49:19,421 - WARNING - Error processing i: [Errno 2] No such file or directory: 'i'
+2025-01-01 20:49:19,422 - WARNING - Error processing s: [Errno 2] No such file or directory: 's'
+2025-01-01 20:49:19,423 - WARNING - Error processing i: [Errno 2] No such file or directory: 'i'
+2025-01-01 20:49:19,424 - WARNING - Error processing o: [Errno 2] No such file or directory: 'o'
+2025-01-01 20:49:19,425 - WARNING - Error processing n: [Errno 2] No such file or directory: 'n'
+2025-01-01 20:49:19,426 - WARNING - Error processing _: [Errno 2] No such file or directory: '_'
+2025-01-01 20:49:19,427 - WARNING - Error processing p: [Errno 2] No such file or directory: 'p'
+2025-01-01 20:49:19,428 - WARNING - Error processing r: [Errno 2] No such file or directory: 'r'
+2025-01-01 20:49:19,429 - WARNING - Error processing o: [Errno 2] No such file or directory: 'o'
+2025-01-01 20:49:19,430 - WARNING - Error processing j: [Errno 2] No such file or directory: 'j'
+2025-01-01 20:49:19,431 - WARNING - Error processing e: [Errno 2] No such file or directory: 'e'
+2025-01-01 20:49:19,432 - WARNING - Error processing c: [Errno 2] No such file or directory: 'c'
+2025-01-01 20:49:19,433 - WARNING - Error processing t: [Errno 2] No such file or directory: 't'
+2025-01-01 20:49:19,436 - WARNING - Error processing /: unable to mmap 640 bytes from file </>: Invalid argument (22)
+2025-01-01 20:49:19,437 - WARNING - Error processing d: [Errno 2] No such file or directory: 'd'
+2025-01-01 20:49:19,438 - WARNING - Error processing a: [Errno 2] No such file or directory: 'a'
+2025-01-01 20:49:19,439 - WARNING - Error processing t: [Errno 2] No such file or directory: 't'
+2025-01-01 20:49:19,440 - WARNING - Error processing a: [Errno 2] No such file or directory: 'a'
+2025-01-01 20:49:19,441 - WARNING - Error processing s: [Errno 2] No such file or directory: 's'
+2025-01-01 20:49:19,442 - WARNING - Error processing e: [Errno 2] No such file or directory: 'e'
+2025-01-01 20:49:19,443 - WARNING - Error processing t: [Errno 2] No such file or directory: 't'
+2025-01-01 20:49:19,445 - WARNING - Error processing /: unable to mmap 640 bytes from file </>: Invalid argument (22)
+2025-01-01 20:49:19,446 - WARNING - Error processing m: [Errno 2] No such file or directory: 'm'
+2025-01-01 20:49:19,447 - WARNING - Error processing i: [Errno 2] No such file or directory: 'i'
+2025-01-01 20:49:19,448 - WARNING - Error processing x: [Errno 2] No such file or directory: 'x'
+2025-01-01 20:49:19,449 - WARNING - Error processing _: [Errno 2] No such file or directory: '_'
+2025-01-01 20:49:19,450 - WARNING - Error processing d: [Errno 2] No such file or directory: 'd'
+2025-01-01 20:49:19,451 - WARNING - Error processing a: [Errno 2] No such file or directory: 'a'
+2025-01-01 20:49:19,452 - WARNING - Error processing t: [Errno 2] No such file or directory: 't'
+2025-01-01 20:49:19,453 - WARNING - Error processing a: [Errno 2] No such file or directory: 'a'
+2025-01-01 20:49:19,454 - WARNING - Error processing s: [Errno 2] No such file or directory: 's'
+2025-01-01 20:49:19,455 - WARNING - Error processing e: [Errno 2] No such file or directory: 'e'
+2025-01-01 20:49:19,457 - WARNING - Error processing t: [Errno 2] No such file or directory: 't'
+2025-01-01 20:49:19,459 - WARNING - Error processing /: unable to mmap 640 bytes from file </>: Invalid argument (22)
+2025-01-01 20:49:19,460 - WARNING - Error processing b: [Errno 2] No such file or directory: 'b'
+2025-01-01 20:49:19,461 - WARNING - Error processing a: [Errno 2] No such file or directory: 'a'
+2025-01-01 20:49:19,463 - WARNING - Error processing l: [Errno 2] No such file or directory: 'l'
+2025-01-01 20:49:19,464 - WARNING - Error processing a: [Errno 2] No such file or directory: 'a'
+2025-01-01 20:49:19,465 - WARNING - Error processing n: [Errno 2] No such file or directory: 'n'
+2025-01-01 20:49:19,466 - WARNING - Error processing c: [Errno 2] No such file or directory: 'c'
+2025-01-01 20:49:19,466 - WARNING - Error processing e: [Errno 2] No such file or directory: 'e'
+2025-01-01 20:49:19,467 - WARNING - Error processing d: [Errno 2] No such file or directory: 'd'
+2025-01-01 20:49:19,468 - WARNING - Error processing _: [Errno 2] No such file or directory: '_'
+2025-01-01 20:49:19,470 - WARNING - Error processing i: [Errno 2] No such file or directory: 'i'
+2025-01-01 20:49:19,471 - WARNING - Error processing m: [Errno 2] No such file or directory: 'm'
+2025-01-01 20:49:19,472 - WARNING - Error processing a: [Errno 2] No such file or directory: 'a'
+2025-01-01 20:49:19,473 - WARNING - Error processing g: [Errno 2] No such file or directory: 'g'
+2025-01-01 20:49:19,474 - WARNING - Error processing e: [Errno 2] No such file or directory: 'e'
+2025-01-01 20:49:19,475 - WARNING - Error processing s: [Errno 2] No such file or directory: 's'
+2025-01-01 20:49:19,478 - ERROR - Error during execution: stack expects a non-empty TensorList
+Traceback (most recent call last):
+  File "/Users/francesco/Repository/computer_vision_project/folder/main.py", line 78, in main
+    compute_dataset_statistics(Config.BALANCED_DIR)
+  File "/Users/francesco/Repository/computer_vision_project/folder/preprocess.py", line 99, in compute_dataset_statistics
+    dataset_mean = torch.stack(means).mean(dim=0)
+                   ^^^^^^^^^^^^^^^^^^
+RuntimeError: stack expects a non-empty TensorList
+2025-01-01 20:54:51,003 - INFO - Starting training with configuration: {'__module__': '__main__', 'INPUT_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/categorized_images', 'OUTPUT_DIR': 'outputs', 'BALANCED_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/balanced_images', 'PERFORM_BALANCING': False, 'COMPUTE_STATISTICS': True, 'REDUCTION_FACTOR': 2, 'BATCH_SIZE': 64, 'EPOCHS': 10, 'LEARNING_RATE': 0.001, 'NUM_WORKERS': 4, 'DEVICE': device(type='cpu'), '__dict__': <attribute '__dict__' of 'Config' objects>, '__weakref__': <attribute '__weakref__' of 'Config' objects>, '__doc__': None}
+2025-01-01 20:54:51,003 - INFO - Using device: cpu
+2025-01-01 20:54:51,003 - INFO - Skipping dataset balancing...
+2025-01-01 20:54:51,003 - INFO - Computing dataset statistics...
+2025-01-01 20:54:51,065 - INFO - Found 26869 images for computing statistics
+2025-01-01 20:55:16,151 - INFO - 
+Dataset Statistics:
+2025-01-01 20:55:16,151 - INFO - Mean: [0.7889, 0.5917, 0.5820]
+2025-01-01 20:55:16,151 - INFO - Std:  [0.0854, 0.1040, 0.1160]
+2025-01-01 20:55:16,163 - INFO - Preparing datasets...
+2025-01-01 20:55:16,163 - ERROR - Error during execution: prepare_datasets() missing 1 required positional argument: 'stats_path'
+Traceback (most recent call last):
+  File "/Users/francesco/Repository/computer_vision_project/folder/main.py", line 82, in main
+    train_loader, val_loader, test_loader = prepare_datasets(
+                                            ^^^^^^^^^^^^^^^^^
+TypeError: prepare_datasets() missing 1 required positional argument: 'stats_path'
+2025-01-01 21:00:15,683 - INFO - Starting training with configuration: {'__module__': '__main__', 'INPUT_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/categorized_images', 'OUTPUT_DIR': 'outputs', 'BALANCED_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/balanced_images', 'STATISTICS_PATH': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset', 'PERFORM_BALANCING': False, 'COMPUTE_STATISTICS': True, 'REDUCTION_FACTOR': 2, 'BATCH_SIZE': 64, 'EPOCHS': 10, 'LEARNING_RATE': 0.001, 'NUM_WORKERS': 4, 'DEVICE': device(type='cpu'), '__dict__': <attribute '__dict__' of 'Config' objects>, '__weakref__': <attribute '__weakref__' of 'Config' objects>, '__doc__': None}
+2025-01-01 21:00:15,683 - INFO - Using device: cpu
+2025-01-01 21:00:15,683 - INFO - Skipping dataset balancing...
+2025-01-01 21:00:15,683 - INFO - Computing dataset statistics...
+2025-01-01 21:00:15,743 - INFO - Found 26869 images for computing statistics
+2025-01-01 21:00:41,002 - INFO - 
+Dataset Statistics:
+2025-01-01 21:00:41,003 - INFO - Mean: [0.7889, 0.5917, 0.5820]
+2025-01-01 21:00:41,003 - INFO - Std:  [0.0854, 0.1040, 0.1160]
+2025-01-01 21:00:41,014 - INFO - Preparing datasets...
+2025-01-01 21:00:41,224 - ERROR - Error during execution: [Errno 2] No such file or directory: 'dataset_statistics.pt'
+Traceback (most recent call last):
+  File "/Users/francesco/Repository/computer_vision_project/folder/main.py", line 83, in main
+    train_loader, val_loader, test_loader = prepare_datasets(
+                                            ^^^^^^^^^^^^^^^^^
+  File "/Users/francesco/Repository/computer_vision_project/folder/preprocess.py", line 308, in prepare_datasets
+    stats = torch.load('dataset_statistics.pt')
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/torch/serialization.py", line 997, in load
+    with _open_file_like(f, 'rb') as opened_file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/torch/serialization.py", line 444, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/torch/serialization.py", line 425, in __init__
+    super().__init__(open(name, mode))
+                     ^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'dataset_statistics.pt'
+2025-01-01 21:03:47,129 - INFO - Starting training with configuration: {'__module__': '__main__', 'INPUT_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/categorized_images', 'OUTPUT_DIR': 'outputs', 'BALANCED_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/balanced_images', 'STATISTICS_PATH': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset', 'PERFORM_BALANCING': False, 'COMPUTE_STATISTICS': True, 'REDUCTION_FACTOR': 2, 'BATCH_SIZE': 64, 'EPOCHS': 10, 'LEARNING_RATE': 0.001, 'NUM_WORKERS': 4, 'DEVICE': device(type='cpu'), '__dict__': <attribute '__dict__' of 'Config' objects>, '__weakref__': <attribute '__weakref__' of 'Config' objects>, '__doc__': None}
+2025-01-01 21:03:47,129 - INFO - Using device: cpu
+2025-01-01 21:03:47,129 - INFO - Skipping dataset balancing...
+2025-01-01 21:03:47,129 - INFO - Computing dataset statistics...
+2025-01-01 21:03:47,191 - INFO - Found 26869 images for computing statistics
+2025-01-01 21:04:12,244 - INFO - 
+Dataset Statistics:
+2025-01-01 21:04:12,244 - INFO - Mean: [0.7889, 0.5917, 0.5820]
+2025-01-01 21:04:12,244 - INFO - Std:  [0.0854, 0.1040, 0.1160]
+2025-01-01 21:04:12,256 - INFO - Preparing datasets...
+2025-01-01 21:04:12,468 - ERROR - Error during execution: [Errno 2] No such file or directory: 'dataset_statistics.pt'
+Traceback (most recent call last):
+  File "/Users/francesco/Repository/computer_vision_project/folder/main.py", line 83, in main
+    train_loader, val_loader, test_loader = prepare_datasets(
+                                            ^^^^^^^^^^^^^^^^^
+  File "/Users/francesco/Repository/computer_vision_project/folder/preprocess.py", line 308, in prepare_datasets
+    stats = torch.load('dataset_statistics.pt')
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/torch/serialization.py", line 997, in load
+    with _open_file_like(f, 'rb') as opened_file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/torch/serialization.py", line 444, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/torch/serialization.py", line 425, in __init__
+    super().__init__(open(name, mode))
+                     ^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'dataset_statistics.pt'
+2025-01-01 21:06:50,210 - INFO - Starting training with configuration: {'__module__': '__main__', 'INPUT_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/categorized_images', 'OUTPUT_DIR': 'outputs', 'BALANCED_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/balanced_images', 'STATISTICS_PATH': '/Users/francesco/Repository/computer_vision_project', 'PERFORM_BALANCING': False, 'COMPUTE_STATISTICS': True, 'REDUCTION_FACTOR': 2, 'BATCH_SIZE': 64, 'EPOCHS': 10, 'LEARNING_RATE': 0.001, 'NUM_WORKERS': 4, 'DEVICE': device(type='cpu'), '__dict__': <attribute '__dict__' of 'Config' objects>, '__weakref__': <attribute '__weakref__' of 'Config' objects>, '__doc__': None}
+2025-01-01 21:06:50,210 - INFO - Using device: cpu
+2025-01-01 21:06:50,210 - INFO - Skipping dataset balancing...
+2025-01-01 21:06:50,210 - INFO - Computing dataset statistics...
+2025-01-01 21:06:50,274 - INFO - Found 26869 images for computing statistics
+2025-01-01 21:07:15,710 - INFO - 
+Dataset Statistics:
+2025-01-01 21:07:15,710 - INFO - Mean: [0.7889, 0.5917, 0.5820]
+2025-01-01 21:07:15,710 - INFO - Std:  [0.0854, 0.1040, 0.1160]
+2025-01-01 21:07:15,722 - INFO - Preparing datasets...
+2025-01-01 21:07:15,929 - ERROR - Error during execution: [Errno 21] Is a directory: '/Users/francesco/Repository/computer_vision_project'
+Traceback (most recent call last):
+  File "/Users/francesco/Repository/computer_vision_project/folder/main.py", line 83, in main
+    train_loader, val_loader, test_loader = prepare_datasets(
+                                            ^^^^^^^^^^^^^^^^^
+  File "/Users/francesco/Repository/computer_vision_project/folder/preprocess.py", line 308, in prepare_datasets
+    stats = torch.load(stats_path)
+            ^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/torch/serialization.py", line 997, in load
+    with _open_file_like(f, 'rb') as opened_file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/torch/serialization.py", line 444, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/torch/serialization.py", line 425, in __init__
+    super().__init__(open(name, mode))
+                     ^^^^^^^^^^^^^^^^
+IsADirectoryError: [Errno 21] Is a directory: '/Users/francesco/Repository/computer_vision_project'
+2025-01-01 21:08:26,644 - INFO - Starting training with configuration: {'__module__': '__main__', 'INPUT_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/categorized_images', 'OUTPUT_DIR': 'outputs', 'BALANCED_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/balanced_images', 'STATISTICS_PATH': '/Users/francesco/Repository/computer_vision_project', 'PERFORM_BALANCING': False, 'COMPUTE_STATISTICS': True, 'REDUCTION_FACTOR': 2, 'BATCH_SIZE': 64, 'EPOCHS': 10, 'LEARNING_RATE': 0.001, 'NUM_WORKERS': 4, 'DEVICE': device(type='cpu'), '__dict__': <attribute '__dict__' of 'Config' objects>, '__weakref__': <attribute '__weakref__' of 'Config' objects>, '__doc__': None}
+2025-01-01 21:08:26,644 - INFO - Using device: cpu
+2025-01-01 21:08:26,644 - INFO - Skipping dataset balancing...
+2025-01-01 21:08:26,644 - INFO - Computing dataset statistics...
+2025-01-01 21:08:26,708 - INFO - Found 26869 images for computing statistics
+2025-01-01 21:08:51,923 - INFO - 
+Dataset Statistics:
+2025-01-01 21:08:51,923 - INFO - Mean: [0.7889, 0.5917, 0.5820]
+2025-01-01 21:08:51,923 - INFO - Std:  [0.0854, 0.1040, 0.1160]
+2025-01-01 21:08:51,935 - INFO - Preparing datasets...
+2025-01-01 21:08:52,145 - ERROR - Error during execution: [Errno 21] Is a directory: '/Users/francesco/Repository/computer_vision_project'
+Traceback (most recent call last):
+  File "/Users/francesco/Repository/computer_vision_project/folder/main.py", line 83, in main
+    train_loader, val_loader, test_loader = prepare_datasets(
+                                            ^^^^^^^^^^^^^^^^^
+  File "/Users/francesco/Repository/computer_vision_project/folder/preprocess.py", line 308, in prepare_datasets
+    stats = torch.load(stats_path, 'dataset_statistics.pt')
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/torch/serialization.py", line 997, in load
+    with _open_file_like(f, 'rb') as opened_file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/torch/serialization.py", line 444, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/torch/serialization.py", line 425, in __init__
+    super().__init__(open(name, mode))
+                     ^^^^^^^^^^^^^^^^
+IsADirectoryError: [Errno 21] Is a directory: '/Users/francesco/Repository/computer_vision_project'
+2025-01-01 21:10:15,556 - INFO - Starting training with configuration: {'__module__': '__main__', 'INPUT_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/categorized_images', 'OUTPUT_DIR': 'outputs', 'BALANCED_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/balanced_images', 'STATISTICS_PATH': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/balanced_images/dataset_statistics.pt', 'PERFORM_BALANCING': False, 'COMPUTE_STATISTICS': True, 'REDUCTION_FACTOR': 2, 'BATCH_SIZE': 64, 'EPOCHS': 10, 'LEARNING_RATE': 0.001, 'NUM_WORKERS': 4, 'DEVICE': device(type='cpu'), '__dict__': <attribute '__dict__' of 'Config' objects>, '__weakref__': <attribute '__weakref__' of 'Config' objects>, '__doc__': None}
+2025-01-01 21:10:15,557 - INFO - Using device: cpu
+2025-01-01 21:10:15,557 - INFO - Skipping dataset balancing...
+2025-01-01 21:10:15,557 - INFO - Computing dataset statistics...
+2025-01-01 21:10:15,618 - INFO - Found 26869 images for computing statistics
+2025-01-01 21:10:41,019 - ERROR - Error during execution: Parent directory /Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/balanced_images/dataset_statistics.pt does not exist.
+Traceback (most recent call last):
+  File "/Users/francesco/Repository/computer_vision_project/folder/main.py", line 79, in main
+    compute_dataset_statistics(Config.BALANCED_DIR, Config.STATISTICS_PATH)
+  File "/Users/francesco/Repository/computer_vision_project/folder/preprocess.py", line 135, in compute_dataset_statistics
+    torch.save({
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/torch/serialization.py", line 627, in save
+    with _open_zipfile_writer(f) as opened_zipfile:
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/torch/serialization.py", line 501, in _open_zipfile_writer
+    return container(name_or_buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/torch/serialization.py", line 472, in __init__
+    super().__init__(torch._C.PyTorchFileWriter(self.name))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Parent directory /Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/balanced_images/dataset_statistics.pt does not exist.
+2025-01-01 21:11:45,226 - INFO - Starting training with configuration: {'__module__': '__main__', 'INPUT_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/categorized_images', 'OUTPUT_DIR': 'outputs', 'BALANCED_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/balanced_images', 'STATISTICS_PATH': '/Users/francesco/Repository/computer_vision_project/dataset_statistics.pt', 'PERFORM_BALANCING': False, 'COMPUTE_STATISTICS': False, 'REDUCTION_FACTOR': 2, 'BATCH_SIZE': 64, 'EPOCHS': 10, 'LEARNING_RATE': 0.001, 'NUM_WORKERS': 4, 'DEVICE': device(type='cpu'), '__dict__': <attribute '__dict__' of 'Config' objects>, '__weakref__': <attribute '__weakref__' of 'Config' objects>, '__doc__': None}
+2025-01-01 21:11:45,226 - INFO - Using device: cpu
+2025-01-01 21:11:45,226 - INFO - Skipping dataset balancing...
+2025-01-01 21:11:45,226 - INFO - Preparing datasets...
+2025-01-01 21:11:45,429 - INFO - Train dataset size: 16121
+2025-01-01 21:11:45,429 - INFO - Validation dataset size: 5374
+2025-01-01 21:11:45,429 - INFO - Test dataset size: 5374
+2025-01-01 21:11:45,451 - INFO - Starting training...
+2025-01-01 21:14:27,942 - INFO - Starting training with configuration: {'__module__': '__main__', 'INPUT_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/categorized_images', 'OUTPUT_DIR': 'outputs', 'BALANCED_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/balanced_images', 'STATISTICS_PATH': '/Users/francesco/Repository/computer_vision_project/dataset_statistics.pt', 'PERFORM_BALANCING': False, 'COMPUTE_STATISTICS': False, 'REDUCTION_FACTOR': 2, 'BATCH_SIZE': 64, 'EPOCHS': 10, 'LEARNING_RATE': 0.001, 'NUM_WORKERS': 4, 'DEVICE': device(type='cpu'), '__dict__': <attribute '__dict__' of 'Config' objects>, '__weakref__': <attribute '__weakref__' of 'Config' objects>, '__doc__': None}
+2025-01-01 21:14:27,942 - INFO - Using device: cpu
+2025-01-01 21:14:27,942 - INFO - Skipping dataset balancing...
+2025-01-01 21:14:27,942 - INFO - Preparing datasets...
+2025-01-01 21:14:28,165 - INFO - Train dataset size: 16121
+2025-01-01 21:14:28,165 - INFO - Validation dataset size: 5374
+2025-01-01 21:14:28,165 - INFO - Test dataset size: 5374
+2025-01-01 21:14:28,190 - INFO - Starting training...
+2025-01-01 21:15:34,570 - INFO - Starting training with configuration: {'__module__': '__main__', 'INPUT_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/categorized_images', 'OUTPUT_DIR': 'outputs', 'BALANCED_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/balanced_images', 'STATISTICS_PATH': '/Users/francesco/Repository/computer_vision_project/dataset_statistics.pt', 'PERFORM_BALANCING': False, 'COMPUTE_STATISTICS': False, 'REDUCTION_FACTOR': 2, 'BATCH_SIZE': 64, 'EPOCHS': 10, 'LEARNING_RATE': 0.001, 'NUM_WORKERS': 4, 'DEVICE': device(type='cpu'), '__dict__': <attribute '__dict__' of 'Config' objects>, '__weakref__': <attribute '__weakref__' of 'Config' objects>, '__doc__': None}
+2025-01-01 21:15:34,571 - INFO - Using device: cpu
+2025-01-01 21:15:34,571 - INFO - Skipping dataset balancing...
+2025-01-01 21:15:34,571 - INFO - Preparing datasets...
+2025-01-01 21:15:34,778 - INFO - Train dataset size: 16121
+2025-01-01 21:15:34,778 - INFO - Validation dataset size: 5374
+2025-01-01 21:15:34,778 - INFO - Test dataset size: 5374
+2025-01-01 21:15:34,801 - INFO - Starting training...
+2025-01-01 21:20:27,869 - INFO - Starting training with configuration: {'__module__': '__main__', 'INPUT_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/categorized_images', 'OUTPUT_DIR': 'outputs', 'BALANCED_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/balanced_images', 'STATISTICS_PATH': '/Users/francesco/Repository/computer_vision_project/dataset_statistics.pt', 'PERFORM_BALANCING': False, 'COMPUTE_STATISTICS': False, 'REDUCTION_FACTOR': 2, 'BATCH_SIZE': 64, 'EPOCHS': 10, 'LEARNING_RATE': 0.001, 'NUM_WORKERS': 10, 'DEVICE': device(type='cpu'), '__dict__': <attribute '__dict__' of 'Config' objects>, '__weakref__': <attribute '__weakref__' of 'Config' objects>, '__doc__': None}
+2025-01-01 21:20:27,869 - INFO - Using device: cpu
+2025-01-01 21:20:27,869 - INFO - Skipping dataset balancing...
+2025-01-01 21:20:27,869 - INFO - Preparing datasets...
+2025-01-01 21:20:28,094 - INFO - Train dataset size: 16121
+2025-01-01 21:20:28,094 - INFO - Validation dataset size: 5374
+2025-01-01 21:20:28,094 - INFO - Test dataset size: 5374
+2025-01-01 21:20:28,115 - ERROR - Error during execution: Dynamo is not supported on Python 3.12+
+Traceback (most recent call last):
+  File "/Users/francesco/Repository/computer_vision_project/folder/main.py", line 92, in main
+    model = torch.compile(model)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/torch/__init__.py", line 1868, in compile
+    raise RuntimeError("Dynamo is not supported on Python 3.12+")
+RuntimeError: Dynamo is not supported on Python 3.12+
+2025-01-01 21:21:48,941 - INFO - Starting training with configuration: {'__module__': '__main__', 'INPUT_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/categorized_images', 'OUTPUT_DIR': 'outputs', 'BALANCED_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/balanced_images', 'STATISTICS_PATH': '/Users/francesco/Repository/computer_vision_project/dataset_statistics.pt', 'PERFORM_BALANCING': False, 'COMPUTE_STATISTICS': False, 'REDUCTION_FACTOR': 2, 'BATCH_SIZE': 64, 'EPOCHS': 10, 'LEARNING_RATE': 0.001, 'NUM_WORKERS': 10, 'DEVICE': device(type='cpu'), '__dict__': <attribute '__dict__' of 'Config' objects>, '__weakref__': <attribute '__weakref__' of 'Config' objects>, '__doc__': None}
+2025-01-01 21:21:48,941 - INFO - Using device: cpu
+2025-01-01 21:21:48,941 - INFO - Skipping dataset balancing...
+2025-01-01 21:21:48,941 - INFO - Preparing datasets...
+2025-01-01 21:21:49,151 - INFO - Train dataset size: 16121
+2025-01-01 21:21:49,151 - INFO - Validation dataset size: 5374
+2025-01-01 21:21:49,151 - INFO - Test dataset size: 5374
+2025-01-01 21:21:49,173 - INFO - Starting training...
+2025-01-01 21:58:18,396 - INFO - Starting training with configuration: {'__module__': '__main__', '__doc__': 'Configuration settings for the training pipeline.', 'INPUT_DIR': '/path/to/dataset/categorized_images', 'OUTPUT_DIR': 'outputs', 'BALANCED_DIR': '/path/to/dataset/balanced_images', 'BATCH_SIZE': 64, 'EPOCHS': 10, 'LEARNING_RATE': 0.001, 'NUM_WORKERS': -1, 'gpus': [], 'DEVICE': '/CPU:0', '__dict__': <attribute '__dict__' of 'Config' objects>, '__weakref__': <attribute '__weakref__' of 'Config' objects>}
+2025-01-01 21:58:18,397 - INFO - Using device: /CPU:0
+2025-01-01 21:58:18,397 - INFO - Preparing datasets...
+2025-01-01 21:58:18,398 - ERROR - Error during execution: With n_samples=0, test_size=0.4 and train_size=None, the resulting train set will be empty. Adjust any of the aforementioned parameters.
+Traceback (most recent call last):
+  File "/Users/francesco/Repository/computer_vision_project/tensorflow/main.py", line 70, in main
+    train_dataset, val_dataset, test_dataset = prepare_datasets(
+                                               ^^^^^^^^^^^^^^^^^
+  File "/Users/francesco/Repository/computer_vision_project/tensorflow/preprocess.py", line 119, in prepare_datasets
+    train_paths, temp_paths, train_labels, temp_labels = train_test_split(
+                                                         ^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/sklearn/utils/_param_validation.py", line 213, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/sklearn/model_selection/_split.py", line 2780, in train_test_split
+    n_train, n_test = _validate_shuffle_split(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/sklearn/model_selection/_split.py", line 2410, in _validate_shuffle_split
+    raise ValueError(
+ValueError: With n_samples=0, test_size=0.4 and train_size=None, the resulting train set will be empty. Adjust any of the aforementioned parameters.
+2025-01-01 22:00:08,577 - INFO - Starting training with configuration: {'__module__': '__main__', '__doc__': 'Configuration settings for the training pipeline.', 'INPUT_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/categorized_images', 'OUTPUT_DIR': 'outputs', 'BALANCED_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/balanced_images', 'STATISTICS_PATH': '/Users/francesco/Repository/computer_vision_project/dataset_statistics.pt', 'BATCH_SIZE': 64, 'EPOCHS': 10, 'LEARNING_RATE': 0.001, 'NUM_WORKERS': -1, 'gpus': [], 'DEVICE': '/CPU:0', '__dict__': <attribute '__dict__' of 'Config' objects>, '__weakref__': <attribute '__weakref__' of 'Config' objects>}
+2025-01-01 22:00:08,577 - INFO - Using device: /CPU:0
+2025-01-01 22:00:08,578 - INFO - Preparing datasets...
+2025-01-01 22:00:08,766 - ERROR - Error during execution: name 'layers' is not defined
+Traceback (most recent call last):
+  File "/Users/francesco/Repository/computer_vision_project/tensorflow/main.py", line 71, in main
+    train_dataset, val_dataset, test_dataset = prepare_datasets(
+                                               ^^^^^^^^^^^^^^^^^
+  File "/Users/francesco/Repository/computer_vision_project/tensorflow/preprocess.py", line 128, in prepare_datasets
+    data_augmentation = create_data_augmentation()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/francesco/Repository/computer_vision_project/tensorflow/preprocess.py", line 97, in create_data_augmentation
+    layers.RandomFlip("horizontal_and_vertical"),
+    ^^^^^^
+NameError: name 'layers' is not defined
+2025-01-01 22:00:48,480 - INFO - Starting training with configuration: {'__module__': '__main__', '__doc__': 'Configuration settings for the training pipeline.', 'INPUT_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/categorized_images', 'OUTPUT_DIR': 'outputs', 'BALANCED_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/balanced_images', 'STATISTICS_PATH': '/Users/francesco/Repository/computer_vision_project/dataset_statistics.pt', 'BATCH_SIZE': 64, 'EPOCHS': 10, 'LEARNING_RATE': 0.001, 'NUM_WORKERS': -1, 'gpus': [], 'DEVICE': '/CPU:0', '__dict__': <attribute '__dict__' of 'Config' objects>, '__weakref__': <attribute '__weakref__' of 'Config' objects>}
+2025-01-01 22:00:48,481 - INFO - Using device: /CPU:0
+2025-01-01 22:00:48,481 - INFO - Preparing datasets...
+2025-01-01 22:00:48,682 - ERROR - Error during execution: in user code:
+
+    File "/Users/francesco/Repository/computer_vision_project/tensorflow/preprocess.py", line 48, in None  *
+        lambda x, y: (self.transform(x), y)
+    File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/keras/src/utils/traceback_utils.py", line 122, in error_handler  **
+        raise e.with_traceback(filtered_tb) from None
+    File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/optree/ops.py", line 747, in tree_map
+        return treespec.unflatten(map(func, *flat_args))
+
+    ValueError: A KerasTensor cannot be used as input to a TensorFlow function. A KerasTensor is a symbolic placeholder for a shape and dtype, used when constructing Keras Functional models or Keras Functions. You can only use it as input to a Keras layer or a Keras operation (from the namespaces `keras.layers` and `keras.operations`). You are likely doing something like:
+    
+    ```
+    x = Input(...)
+    ...
+    tf_fn(x)  # Invalid.
+    ```
+    
+    What you should do instead is wrap `tf_fn` in a layer:
+    
+    ```
+    class MyLayer(Layer):
+        def call(self, x):
+            return tf_fn(x)
+    
+    x = MyLayer()(x)
+    ```
+    
+Traceback (most recent call last):
+  File "/Users/francesco/Repository/computer_vision_project/tensorflow/main.py", line 71, in main
+    train_dataset, val_dataset, test_dataset = prepare_datasets(
+                                               ^^^^^^^^^^^^^^^^^
+  File "/Users/francesco/Repository/computer_vision_project/tensorflow/preprocess.py", line 135, in prepare_datasets
+    ).create_dataset(batch_size, shuffle=True)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/francesco/Repository/computer_vision_project/tensorflow/preprocess.py", line 47, in create_dataset
+    dataset = dataset.map(
+              ^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/tensorflow/python/data/ops/dataset_ops.py", line 2299, in map
+    return map_op._map_v2(
+           ^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/tensorflow/python/data/ops/map_op.py", line 40, in _map_v2
+    return _ParallelMapDataset(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/tensorflow/python/data/ops/map_op.py", line 148, in __init__
+    self._map_func = structured_function.StructuredFunctionWrapper(
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/tensorflow/python/data/ops/structured_function.py", line 265, in __init__
+    self._function = fn_factory()
+                     ^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/tensorflow/python/eager/polymorphic_function/polymorphic_function.py", line 1251, in get_concrete_function
+    concrete = self._get_concrete_function_garbage_collected(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/tensorflow/python/eager/polymorphic_function/polymorphic_function.py", line 1221, in _get_concrete_function_garbage_collected
+    self._initialize(args, kwargs, add_initializers_to=initializers)
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/tensorflow/python/eager/polymorphic_function/polymorphic_function.py", line 696, in _initialize
+    self._concrete_variable_creation_fn = tracing_compilation.trace_function(
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/tensorflow/python/eager/polymorphic_function/tracing_compilation.py", line 178, in trace_function
+    concrete_function = _maybe_define_function(
+                        ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/tensorflow/python/eager/polymorphic_function/tracing_compilation.py", line 283, in _maybe_define_function
+    concrete_function = _create_concrete_function(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/tensorflow/python/eager/polymorphic_function/tracing_compilation.py", line 310, in _create_concrete_function
+    traced_func_graph = func_graph_module.func_graph_from_py_func(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/tensorflow/python/framework/func_graph.py", line 1059, in func_graph_from_py_func
+    func_outputs = python_func(*func_args, **func_kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/tensorflow/python/eager/polymorphic_function/polymorphic_function.py", line 599, in wrapped_fn
+    out = weak_wrapped_fn().__wrapped__(*args, **kwds)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/tensorflow/python/data/ops/structured_function.py", line 231, in wrapped_fn
+    ret = wrapper_helper(*args)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/tensorflow/python/data/ops/structured_function.py", line 161, in wrapper_helper
+    ret = autograph.tf_convert(self._func, ag_ctx)(*nested_args)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/tensorflow/python/autograph/impl/api.py", line 693, in wrapper
+    raise e.ag_error_metadata.to_exception(e)
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/tensorflow/python/autograph/impl/api.py", line 690, in wrapper
+    return converted_call(f, args, kwargs, options=options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/tensorflow/python/autograph/impl/api.py", line 439, in converted_call
+    result = converted_f(*effective_args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/folders/kk/2c_8134s1jqf2s0cx82ytg3h0000gn/T/__autograph_generated_filekfgfkqv5.py", line 6, in <lambda>
+    tf__lam = lambda x, y: ag__.with_function_scope(lambda lscope: (ag__.converted_call(self.transform, (x,), None, lscope), y), 'lscope', ag__.STD)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/tensorflow/python/autograph/core/function_wrappers.py", line 113, in with_function_scope
+    return thunk(scope)
+           ^^^^^^^^^^^^
+  File "/var/folders/kk/2c_8134s1jqf2s0cx82ytg3h0000gn/T/__autograph_generated_filekfgfkqv5.py", line 6, in <lambda>
+    tf__lam = lambda x, y: ag__.with_function_scope(lambda lscope: (ag__.converted_call(self.transform, (x,), None, lscope), y), 'lscope', ag__.STD)
+                                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/tensorflow/python/autograph/impl/api.py", line 377, in converted_call
+    return _call_unconverted(f, args, kwargs, options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/tensorflow/python/autograph/impl/api.py", line 460, in _call_unconverted
+    return f(*args)
+           ^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/keras/src/utils/traceback_utils.py", line 122, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/optree/ops.py", line 747, in tree_map
+    return treespec.unflatten(map(func, *flat_args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: in user code:
+
+    File "/Users/francesco/Repository/computer_vision_project/tensorflow/preprocess.py", line 48, in None  *
+        lambda x, y: (self.transform(x), y)
+    File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/keras/src/utils/traceback_utils.py", line 122, in error_handler  **
+        raise e.with_traceback(filtered_tb) from None
+    File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/optree/ops.py", line 747, in tree_map
+        return treespec.unflatten(map(func, *flat_args))
+
+    ValueError: A KerasTensor cannot be used as input to a TensorFlow function. A KerasTensor is a symbolic placeholder for a shape and dtype, used when constructing Keras Functional models or Keras Functions. You can only use it as input to a Keras layer or a Keras operation (from the namespaces `keras.layers` and `keras.operations`). You are likely doing something like:
+    
+    ```
+    x = Input(...)
+    ...
+    tf_fn(x)  # Invalid.
+    ```
+    
+    What you should do instead is wrap `tf_fn` in a layer:
+    
+    ```
+    class MyLayer(Layer):
+        def call(self, x):
+            return tf_fn(x)
+    
+    x = MyLayer()(x)
+    ```
+    
+
+2025-01-01 22:03:14,714 - INFO - Starting training with configuration: {'__module__': '__main__', '__doc__': 'Configuration settings for the training pipeline.', 'INPUT_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/categorized_images', 'OUTPUT_DIR': 'outputs', 'BALANCED_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/balanced_images', 'STATISTICS_PATH': '/Users/francesco/Repository/computer_vision_project/dataset_statistics.pt', 'BATCH_SIZE': 64, 'EPOCHS': 10, 'LEARNING_RATE': 0.001, 'NUM_WORKERS': -1, 'gpus': [], 'DEVICE': '/CPU:0', '__dict__': <attribute '__dict__' of 'Config' objects>, '__weakref__': <attribute '__weakref__' of 'Config' objects>}
+2025-01-01 22:03:14,714 - INFO - Using device: /CPU:0
+2025-01-01 22:03:14,714 - INFO - Preparing datasets...
+2025-01-01 22:03:14,918 - ERROR - Error during execution: in user code:
+
+    File "/Users/francesco/Repository/computer_vision_project/tensorflow/preprocess.py", line 84, in None  *
+        lambda x, y: (self.augmentation(x, training=True), y)
+    File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/keras/src/utils/traceback_utils.py", line 122, in error_handler  **
+        raise e.with_traceback(filtered_tb) from None
+    File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/optree/ops.py", line 747, in tree_map
+        return treespec.unflatten(map(func, *flat_args))
+
+    ValueError: A KerasTensor cannot be used as input to a TensorFlow function. A KerasTensor is a symbolic placeholder for a shape and dtype, used when constructing Keras Functional models or Keras Functions. You can only use it as input to a Keras layer or a Keras operation (from the namespaces `keras.layers` and `keras.operations`). You are likely doing something like:
+    
+    ```
+    x = Input(...)
+    ...
+    tf_fn(x)  # Invalid.
+    ```
+    
+    What you should do instead is wrap `tf_fn` in a layer:
+    
+    ```
+    class MyLayer(Layer):
+        def call(self, x):
+            return tf_fn(x)
+    
+    x = MyLayer()(x)
+    ```
+    
+Traceback (most recent call last):
+  File "/Users/francesco/Repository/computer_vision_project/tensorflow/main.py", line 71, in main
+    train_dataset, val_dataset, test_dataset = prepare_datasets(
+                                               ^^^^^^^^^^^^^^^^^
+  File "/Users/francesco/Repository/computer_vision_project/tensorflow/preprocess.py", line 218, in prepare_datasets
+    ).create_dataset(batch_size, shuffle=True)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/francesco/Repository/computer_vision_project/tensorflow/preprocess.py", line 83, in create_dataset
+    dataset = dataset.map(
+              ^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/tensorflow/python/data/ops/dataset_ops.py", line 2299, in map
+    return map_op._map_v2(
+           ^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/tensorflow/python/data/ops/map_op.py", line 40, in _map_v2
+    return _ParallelMapDataset(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/tensorflow/python/data/ops/map_op.py", line 148, in __init__
+    self._map_func = structured_function.StructuredFunctionWrapper(
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/tensorflow/python/data/ops/structured_function.py", line 265, in __init__
+    self._function = fn_factory()
+                     ^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/tensorflow/python/eager/polymorphic_function/polymorphic_function.py", line 1251, in get_concrete_function
+    concrete = self._get_concrete_function_garbage_collected(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/tensorflow/python/eager/polymorphic_function/polymorphic_function.py", line 1221, in _get_concrete_function_garbage_collected
+    self._initialize(args, kwargs, add_initializers_to=initializers)
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/tensorflow/python/eager/polymorphic_function/polymorphic_function.py", line 696, in _initialize
+    self._concrete_variable_creation_fn = tracing_compilation.trace_function(
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/tensorflow/python/eager/polymorphic_function/tracing_compilation.py", line 178, in trace_function
+    concrete_function = _maybe_define_function(
+                        ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/tensorflow/python/eager/polymorphic_function/tracing_compilation.py", line 283, in _maybe_define_function
+    concrete_function = _create_concrete_function(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/tensorflow/python/eager/polymorphic_function/tracing_compilation.py", line 310, in _create_concrete_function
+    traced_func_graph = func_graph_module.func_graph_from_py_func(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/tensorflow/python/framework/func_graph.py", line 1059, in func_graph_from_py_func
+    func_outputs = python_func(*func_args, **func_kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/tensorflow/python/eager/polymorphic_function/polymorphic_function.py", line 599, in wrapped_fn
+    out = weak_wrapped_fn().__wrapped__(*args, **kwds)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/tensorflow/python/data/ops/structured_function.py", line 231, in wrapped_fn
+    ret = wrapper_helper(*args)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/tensorflow/python/data/ops/structured_function.py", line 161, in wrapper_helper
+    ret = autograph.tf_convert(self._func, ag_ctx)(*nested_args)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/tensorflow/python/autograph/impl/api.py", line 693, in wrapper
+    raise e.ag_error_metadata.to_exception(e)
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/tensorflow/python/autograph/impl/api.py", line 690, in wrapper
+    return converted_call(f, args, kwargs, options=options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/tensorflow/python/autograph/impl/api.py", line 439, in converted_call
+    result = converted_f(*effective_args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/folders/kk/2c_8134s1jqf2s0cx82ytg3h0000gn/T/__autograph_generated_fileipn89dtp.py", line 6, in <lambda>
+    tf__lam = lambda x, y: ag__.with_function_scope(lambda lscope: (ag__.converted_call(self.augmentation, (x,), dict(training=True), lscope), y), 'lscope', ag__.STD)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/tensorflow/python/autograph/core/function_wrappers.py", line 113, in with_function_scope
+    return thunk(scope)
+           ^^^^^^^^^^^^
+  File "/var/folders/kk/2c_8134s1jqf2s0cx82ytg3h0000gn/T/__autograph_generated_fileipn89dtp.py", line 6, in <lambda>
+    tf__lam = lambda x, y: ag__.with_function_scope(lambda lscope: (ag__.converted_call(self.augmentation, (x,), dict(training=True), lscope), y), 'lscope', ag__.STD)
+                                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/tensorflow/python/autograph/impl/api.py", line 377, in converted_call
+    return _call_unconverted(f, args, kwargs, options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/tensorflow/python/autograph/impl/api.py", line 459, in _call_unconverted
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/keras/src/utils/traceback_utils.py", line 122, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/optree/ops.py", line 747, in tree_map
+    return treespec.unflatten(map(func, *flat_args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: in user code:
+
+    File "/Users/francesco/Repository/computer_vision_project/tensorflow/preprocess.py", line 84, in None  *
+        lambda x, y: (self.augmentation(x, training=True), y)
+    File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/keras/src/utils/traceback_utils.py", line 122, in error_handler  **
+        raise e.with_traceback(filtered_tb) from None
+    File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/optree/ops.py", line 747, in tree_map
+        return treespec.unflatten(map(func, *flat_args))
+
+    ValueError: A KerasTensor cannot be used as input to a TensorFlow function. A KerasTensor is a symbolic placeholder for a shape and dtype, used when constructing Keras Functional models or Keras Functions. You can only use it as input to a Keras layer or a Keras operation (from the namespaces `keras.layers` and `keras.operations`). You are likely doing something like:
+    
+    ```
+    x = Input(...)
+    ...
+    tf_fn(x)  # Invalid.
+    ```
+    
+    What you should do instead is wrap `tf_fn` in a layer:
+    
+    ```
+    class MyLayer(Layer):
+        def call(self, x):
+            return tf_fn(x)
+    
+    x = MyLayer()(x)
+    ```
+    
+
+2025-01-01 22:07:51,289 - INFO - Starting training with configuration: {'__module__': '__main__', '__doc__': 'Configuration settings for the training pipeline.\n    \n    This class centralizes all the configuration parameters for the training process,\n    making it easier to modify settings in one place.\n    ', 'INPUT_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/categorized_images', 'OUTPUT_DIR': 'outputs', 'BALANCED_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/balanced_images', 'BATCH_SIZE': 64, 'EPOCHS': 10, 'LEARNING_RATE': 0.001, 'gpus': [], 'DEVICE': '/CPU:0', '__dict__': <attribute '__dict__' of 'Config' objects>, '__weakref__': <attribute '__weakref__' of 'Config' objects>}
+2025-01-01 22:07:51,289 - INFO - Using device: /CPU:0
+2025-01-01 22:07:51,290 - INFO - Preparing datasets...
+2025-01-01 22:07:51,612 - INFO - Train dataset size: 16121
+2025-01-01 22:07:51,612 - INFO - Validation dataset size: 5374
+2025-01-01 22:07:51,612 - INFO - Test dataset size: 5374
+2025-01-01 22:07:51,756 - ERROR - Error during execution: Exception encountered when calling Block.call().
+
+[1mCould not automatically infer the output shape / dtype of 'block_3' (of type Block). Either the `Block.call()` method is incorrect, or you need to implement the `Block.compute_output_spec() / compute_output_shape()` method. Error encountered:
+
+Exception encountered when calling SqueezeExcite.call().
+
+[1mThe total size of the tensor must be unchanged. Received: input_shape=(40,), target_shape=(1, 1, 96)[0m
+
+Arguments received by SqueezeExcite.call():
+  • x=tf.Tensor(shape=(None, 14, 14, 40), dtype=float32)[0m
+
+Arguments received by Block.call():
+  • args=('<KerasTensor shape=(None, 28, 28, 24), dtype=float32, sparse=False, name=keras_tensor_39>',)
+  • kwargs=<class 'inspect._empty'>
+Traceback (most recent call last):
+  File "/Users/francesco/Repository/computer_vision_project/tensorflow/main.py", line 89, in main
+    model = create_mobile_model(num_classes=1)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/francesco/Repository/computer_vision_project/tensorflow/model.py", line 139, in create_mobile_model
+    x = Block(in_ch, out_ch, kernel, stride, exp, se, act)(x)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/keras/src/utils/traceback_utils.py", line 122, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "/Users/francesco/Repository/computer_vision_project/tensorflow/model.py", line 100, in call
+    out = self.se(out)
+          ^^^^^^^^^^^^
+  File "/Users/francesco/Repository/computer_vision_project/tensorflow/model.py", line 38, in call
+    scale = self.reshape(scale)
+            ^^^^^^^^^^^^^^^^^^^
+ValueError: Exception encountered when calling Block.call().
+
+[1mCould not automatically infer the output shape / dtype of 'block_3' (of type Block). Either the `Block.call()` method is incorrect, or you need to implement the `Block.compute_output_spec() / compute_output_shape()` method. Error encountered:
+
+Exception encountered when calling SqueezeExcite.call().
+
+[1mThe total size of the tensor must be unchanged. Received: input_shape=(40,), target_shape=(1, 1, 96)[0m
+
+Arguments received by SqueezeExcite.call():
+  • x=tf.Tensor(shape=(None, 14, 14, 40), dtype=float32)[0m
+
+Arguments received by Block.call():
+  • args=('<KerasTensor shape=(None, 28, 28, 24), dtype=float32, sparse=False, name=keras_tensor_39>',)
+  • kwargs=<class 'inspect._empty'>
+2025-01-01 22:08:48,984 - INFO - Starting training with configuration: {'__module__': '__main__', '__doc__': 'Configuration settings for the training pipeline.\n    \n    This class centralizes all the configuration parameters for the training process,\n    making it easier to modify settings in one place.\n    ', 'INPUT_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/categorized_images', 'OUTPUT_DIR': 'outputs', 'BALANCED_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/balanced_images', 'BATCH_SIZE': 64, 'EPOCHS': 10, 'LEARNING_RATE': 0.001, 'gpus': [], 'DEVICE': '/CPU:0', '__dict__': <attribute '__dict__' of 'Config' objects>, '__weakref__': <attribute '__weakref__' of 'Config' objects>}
+2025-01-01 22:08:48,984 - INFO - Using device: /CPU:0
+2025-01-01 22:08:48,984 - INFO - Preparing datasets...
+2025-01-01 22:08:49,291 - INFO - Train dataset size: 16121
+2025-01-01 22:08:49,292 - INFO - Validation dataset size: 5374
+2025-01-01 22:08:49,292 - INFO - Test dataset size: 5374
+2025-01-01 22:08:49,670 - INFO - Starting training...
+2025-01-01 22:08:49,670 - INFO - Starting model training...
+2025-01-01 22:08:49,672 - ERROR - Error during execution: When using `save_weights_only=True` in `ModelCheckpoint`, the filepath provided must end in `.weights.h5` (Keras weights format). Received: filepath=outputs/checkpoints/model_epoch_{epoch:02d}.h5
+Traceback (most recent call last):
+  File "/Users/francesco/Repository/computer_vision_project/tensorflow/main.py", line 93, in main
+    history = train_model(
+              ^^^^^^^^^^^^
+  File "/Users/francesco/Repository/computer_vision_project/tensorflow/train.py", line 144, in train_model
+    callbacks = create_callbacks(Path(checkpoint_dir))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/francesco/Repository/computer_vision_project/tensorflow/train.py", line 62, in create_callbacks
+    tf.keras.callbacks.ModelCheckpoint(
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/keras/src/callbacks/model_checkpoint.py", line 183, in __init__
+    raise ValueError(
+ValueError: When using `save_weights_only=True` in `ModelCheckpoint`, the filepath provided must end in `.weights.h5` (Keras weights format). Received: filepath=outputs/checkpoints/model_epoch_{epoch:02d}.h5
+2025-01-01 22:09:32,301 - INFO - Starting training with configuration: {'__module__': '__main__', '__doc__': 'Configuration settings for the training pipeline.\n    \n    This class centralizes all the configuration parameters for the training process,\n    making it easier to modify settings in one place.\n    ', 'INPUT_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/categorized_images', 'OUTPUT_DIR': 'outputs', 'BALANCED_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/balanced_images', 'BATCH_SIZE': 64, 'EPOCHS': 10, 'LEARNING_RATE': 0.001, 'gpus': [], 'DEVICE': '/CPU:0', '__dict__': <attribute '__dict__' of 'Config' objects>, '__weakref__': <attribute '__weakref__' of 'Config' objects>}
+2025-01-01 22:09:32,301 - INFO - Using device: /CPU:0
+2025-01-01 22:09:32,302 - INFO - Preparing datasets...
+2025-01-01 22:09:32,610 - INFO - Train dataset size: 16121
+2025-01-01 22:09:32,610 - INFO - Validation dataset size: 5374
+2025-01-01 22:09:32,610 - INFO - Test dataset size: 5374
+2025-01-01 22:09:32,989 - INFO - Starting training...
+2025-01-01 22:09:32,989 - INFO - Starting model training...
+2025-01-01 22:09:33,189 - ERROR - Error during execution: Exception encountered when calling SqueezeExcite.call().
+
+[1mDimensions must be equal, but are 40 and 96 for '{{node functional_21_1/block_3_1/squeeze_excite_1/mul}} = Mul[T=DT_FLOAT](functional_21_1/block_3_1/sequential_6_1/batch_normalization_13_1/batchnorm/add_1, functional_21_1/block_3_1/squeeze_excite_1/Reshape)' with input shapes: [?,14,14,40], [?,1,1,96].[0m
+
+Arguments received by SqueezeExcite.call():
+  • x=tf.Tensor(shape=(None, 14, 14, 40), dtype=float32)
+Traceback (most recent call last):
+  File "/Users/francesco/Repository/computer_vision_project/tensorflow/main.py", line 93, in main
+    history = train_model(
+              ^^^^^^^^^^^^
+  File "/Users/francesco/Repository/computer_vision_project/tensorflow/train.py", line 147, in train_model
+    history = model.fit(
+              ^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/keras/src/utils/traceback_utils.py", line 122, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "/Users/francesco/Repository/computer_vision_project/tensorflow/model.py", line 121, in call
+    out = self.se(out)
+          ^^^^^^^^^^^^
+  File "/Users/francesco/Repository/computer_vision_project/tensorflow/model.py", line 58, in call
+    return x * excited
+           ~~^~~~~~~~~
+ValueError: Exception encountered when calling SqueezeExcite.call().
+
+[1mDimensions must be equal, but are 40 and 96 for '{{node functional_21_1/block_3_1/squeeze_excite_1/mul}} = Mul[T=DT_FLOAT](functional_21_1/block_3_1/sequential_6_1/batch_normalization_13_1/batchnorm/add_1, functional_21_1/block_3_1/squeeze_excite_1/Reshape)' with input shapes: [?,14,14,40], [?,1,1,96].[0m
+
+Arguments received by SqueezeExcite.call():
+  • x=tf.Tensor(shape=(None, 14, 14, 40), dtype=float32)
+2025-01-01 22:10:54,142 - INFO - Starting training with configuration: {'__module__': '__main__', '__doc__': 'Configuration settings for the training pipeline.\n    \n    This class centralizes all the configuration parameters for the training process,\n    making it easier to modify settings in one place.\n    ', 'INPUT_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/categorized_images', 'OUTPUT_DIR': 'outputs', 'BALANCED_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/balanced_images', 'BATCH_SIZE': 64, 'EPOCHS': 10, 'LEARNING_RATE': 0.001, 'gpus': [], 'DEVICE': '/CPU:0', '__dict__': <attribute '__dict__' of 'Config' objects>, '__weakref__': <attribute '__weakref__' of 'Config' objects>}
+2025-01-01 22:10:54,142 - INFO - Using device: /CPU:0
+2025-01-01 22:10:54,142 - INFO - Preparing datasets...
+2025-01-01 22:10:54,442 - INFO - Train dataset size: 16121
+2025-01-01 22:10:54,442 - INFO - Validation dataset size: 5374
+2025-01-01 22:10:54,442 - INFO - Test dataset size: 5374
+2025-01-01 22:10:54,820 - INFO - Starting training...
+2025-01-01 22:10:54,820 - INFO - Starting model training...
+2025-01-01 22:10:54,984 - ERROR - Error during execution: Exception encountered when calling SqueezeExcite.call().
+
+[1mDimensions must be equal, but are 40 and 96 for '{{node functional_21_1/block_3_1/squeeze_excite_1/mul}} = Mul[T=DT_FLOAT](functional_21_1/block_3_1/sequential_6_1/batch_normalization_13_1/batchnorm/add_1, functional_21_1/block_3_1/squeeze_excite_1/Reshape)' with input shapes: [?,14,14,40], [?,1,1,96].[0m
+
+Arguments received by SqueezeExcite.call():
+  • inputs=tf.Tensor(shape=(None, 14, 14, 40), dtype=float32)
+Traceback (most recent call last):
+  File "/Users/francesco/Repository/computer_vision_project/tensorflow/main.py", line 93, in main
+    history = train_model(
+              ^^^^^^^^^^^^
+  File "/Users/francesco/Repository/computer_vision_project/tensorflow/train.py", line 147, in train_model
+    history = model.fit(
+              ^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/keras/src/utils/traceback_utils.py", line 122, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "/Users/francesco/Repository/computer_vision_project/tensorflow/model.py", line 130, in call
+    out = self.se(out)
+          ^^^^^^^^^^^^
+  File "/Users/francesco/Repository/computer_vision_project/tensorflow/model.py", line 59, in call
+    return inputs * excited
+           ~~~~~~~^~~~~~~~~
+ValueError: Exception encountered when calling SqueezeExcite.call().
+
+[1mDimensions must be equal, but are 40 and 96 for '{{node functional_21_1/block_3_1/squeeze_excite_1/mul}} = Mul[T=DT_FLOAT](functional_21_1/block_3_1/sequential_6_1/batch_normalization_13_1/batchnorm/add_1, functional_21_1/block_3_1/squeeze_excite_1/Reshape)' with input shapes: [?,14,14,40], [?,1,1,96].[0m
+
+Arguments received by SqueezeExcite.call():
+  • inputs=tf.Tensor(shape=(None, 14, 14, 40), dtype=float32)
+2025-01-01 22:11:56,761 - INFO - Starting training with configuration: {'__module__': '__main__', '__doc__': 'Configuration settings for the training pipeline.\n    \n    This class centralizes all the configuration parameters for the training process,\n    making it easier to modify settings in one place.\n    ', 'INPUT_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/categorized_images', 'OUTPUT_DIR': 'outputs', 'BALANCED_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/balanced_images', 'BATCH_SIZE': 64, 'EPOCHS': 10, 'LEARNING_RATE': 0.001, 'gpus': [], 'DEVICE': '/CPU:0', '__dict__': <attribute '__dict__' of 'Config' objects>, '__weakref__': <attribute '__weakref__' of 'Config' objects>}
+2025-01-01 22:11:56,761 - INFO - Using device: /CPU:0
+2025-01-01 22:11:56,762 - INFO - Preparing datasets...
+2025-01-01 22:11:57,066 - INFO - Train dataset size: 16121
+2025-01-01 22:11:57,066 - INFO - Validation dataset size: 5374
+2025-01-01 22:11:57,066 - INFO - Test dataset size: 5374
+2025-01-01 22:11:57,447 - INFO - Starting training...
+2025-01-01 22:11:57,447 - INFO - Starting model training...
+2025-01-01 22:11:57,612 - ERROR - Error during execution: Exception encountered when calling SqueezeExcite.call().
+
+[1mDimensions must be equal, but are 40 and 96 for '{{node functional_21_1/block_3_1/squeeze_excite_1/mul}} = Mul[T=DT_FLOAT](functional_21_1/block_3_1/sequential_6_1/batch_normalization_13_1/batchnorm/add_1, functional_21_1/block_3_1/squeeze_excite_1/Reshape)' with input shapes: [?,14,14,40], [?,1,1,96].[0m
+
+Arguments received by SqueezeExcite.call():
+  • inputs=tf.Tensor(shape=(None, 14, 14, 40), dtype=float32)
+Traceback (most recent call last):
+  File "/Users/francesco/Repository/computer_vision_project/tensorflow/main.py", line 93, in main
+    history = train_model(
+              ^^^^^^^^^^^^
+  File "/Users/francesco/Repository/computer_vision_project/tensorflow/train.py", line 147, in train_model
+    history = model.fit(
+              ^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/keras/src/utils/traceback_utils.py", line 122, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "/Users/francesco/Repository/computer_vision_project/tensorflow/model.py", line 130, in call
+    out = self.se(out)
+          ^^^^^^^^^^^^
+  File "/Users/francesco/Repository/computer_vision_project/tensorflow/model.py", line 59, in call
+    return inputs * excited
+           ~~~~~~~^~~~~~~~~
+ValueError: Exception encountered when calling SqueezeExcite.call().
+
+[1mDimensions must be equal, but are 40 and 96 for '{{node functional_21_1/block_3_1/squeeze_excite_1/mul}} = Mul[T=DT_FLOAT](functional_21_1/block_3_1/sequential_6_1/batch_normalization_13_1/batchnorm/add_1, functional_21_1/block_3_1/squeeze_excite_1/Reshape)' with input shapes: [?,14,14,40], [?,1,1,96].[0m
+
+Arguments received by SqueezeExcite.call():
+  • inputs=tf.Tensor(shape=(None, 14, 14, 40), dtype=float32)
+2025-01-01 22:12:54,019 - INFO - Starting training with configuration: {'__module__': '__main__', '__doc__': 'Configuration settings for the training pipeline.\n    \n    This class centralizes all the configuration parameters for the training process,\n    making it easier to modify settings in one place.\n    ', 'INPUT_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/categorized_images', 'OUTPUT_DIR': 'outputs', 'BALANCED_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/balanced_images', 'BATCH_SIZE': 64, 'EPOCHS': 10, 'LEARNING_RATE': 0.001, 'gpus': [], 'DEVICE': '/CPU:0', '__dict__': <attribute '__dict__' of 'Config' objects>, '__weakref__': <attribute '__weakref__' of 'Config' objects>}
+2025-01-01 22:12:54,019 - INFO - Using device: /CPU:0
+2025-01-01 22:12:54,020 - INFO - Preparing datasets...
+2025-01-01 22:12:54,333 - INFO - Train dataset size: 16121
+2025-01-01 22:12:54,333 - INFO - Validation dataset size: 5374
+2025-01-01 22:12:54,333 - INFO - Test dataset size: 5374
+2025-01-01 22:12:54,862 - INFO - Starting training...
+2025-01-01 22:12:54,862 - INFO - Starting model training...
+2025-01-01 22:15:56,613 - INFO - Starting training with configuration: {'__module__': '__main__', '__doc__': 'Configuration settings for the training pipeline.\n    \n    This class centralizes all the configuration parameters for the training process,\n    making it easier to modify settings in one place.\n    ', 'INPUT_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/categorized_images', 'OUTPUT_DIR': 'outputs', 'BALANCED_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/balanced_images', 'BATCH_SIZE': 64, 'EPOCHS': 500, 'LEARNING_RATE': 0.001, 'gpus': [], 'DEVICE': '/CPU:0', '__dict__': <attribute '__dict__' of 'Config' objects>, '__weakref__': <attribute '__weakref__' of 'Config' objects>}
+2025-01-01 22:15:56,613 - INFO - Using device: /CPU:0
+2025-01-01 22:15:56,614 - INFO - Preparing datasets...
+2025-01-01 22:15:56,978 - INFO - Train dataset size: 16121
+2025-01-01 22:15:56,979 - INFO - Validation dataset size: 5374
+2025-01-01 22:15:56,979 - INFO - Test dataset size: 5374
+2025-01-01 22:15:57,505 - INFO - Starting training...
+2025-01-01 22:15:57,506 - INFO - Starting model training...
+2025-01-01 23:21:31,981 - INFO - Restoring model weights from epoch 21
+2025-01-01 23:21:32,461 - INFO - Early stopping triggered at epoch 29
+2025-01-01 23:21:33,020 - WARNING - No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
+2025-01-01 23:21:33,113 - INFO - Evaluating model...
+2025-01-01 23:21:33,113 - INFO - Evaluating model on test dataset...
+2025-01-01 23:21:43,674 - INFO - Test Results:
+2025-01-01 23:21:43,674 - INFO - binary_accuracy: 0.9671
+2025-01-01 23:21:43,674 - INFO - loss: 0.1045
+2025-01-01 23:21:43,674 - INFO - Saving final model...
+2025-01-01 23:21:43,674 - ERROR - Error during execution: Invalid filepath extension for saving. Please add either a `.keras` extension for the native Keras format (recommended) or a `.h5` extension. Use `model.export(filepath)` if you want to export a SavedModel for use with TFLite/TFServing/etc. Received: filepath=outputs/final_model.
+Traceback (most recent call last):
+  File "/Users/francesco/Repository/computer_vision_project/tensorflow/main.py", line 108, in main
+    model.save(output_dir / 'final_model')
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/keras/src/utils/traceback_utils.py", line 122, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/keras/src/saving/saving_api.py", line 109, in save_model
+    raise ValueError(
+ValueError: Invalid filepath extension for saving. Please add either a `.keras` extension for the native Keras format (recommended) or a `.h5` extension. Use `model.export(filepath)` if you want to export a SavedModel for use with TFLite/TFServing/etc. Received: filepath=outputs/final_model.
+2025-01-01 23:27:12,295 - INFO - Starting training with configuration: {'__module__': '__main__', '__doc__': 'Configuration settings for the training pipeline.\n    \n    This class centralizes all the configuration parameters for the training process,\n    making it easier to modify settings in one place.\n    ', 'INPUT_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/categorized_images', 'OUTPUT_DIR': 'outputs', 'BALANCED_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/balanced_images', 'BATCH_SIZE': 64, 'EPOCHS': 1, 'LEARNING_RATE': 0.001, 'gpus': [], 'DEVICE': '/CPU:0', '__dict__': <attribute '__dict__' of 'Config' objects>, '__weakref__': <attribute '__weakref__' of 'Config' objects>}
+2025-01-01 23:27:12,295 - INFO - Using device: /CPU:0
+2025-01-01 23:27:12,296 - INFO - Preparing datasets...
+2025-01-01 23:27:12,604 - INFO - Train dataset size: 16121
+2025-01-01 23:27:12,605 - INFO - Validation dataset size: 5374
+2025-01-01 23:27:12,605 - INFO - Test dataset size: 5374
+2025-01-01 23:27:13,131 - INFO - Starting training...
+2025-01-01 23:27:13,131 - INFO - Starting model training...
+2025-01-01 23:29:31,317 - WARNING - No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
+2025-01-01 23:29:31,402 - INFO - Evaluating model...
+2025-01-01 23:29:31,403 - INFO - Evaluating model on test dataset...
+2025-01-01 23:29:40,673 - INFO - Test Results:
+2025-01-01 23:29:40,674 - INFO - binary_accuracy: 0.6055
+2025-01-01 23:29:40,674 - INFO - loss: 0.7446
+2025-01-01 23:29:40,674 - INFO - Saving final model...
+2025-01-01 23:29:40,835 - INFO - Training completed successfully!
+2025-01-01 23:38:22,920 - INFO - Starting training with configuration: {'__module__': '__main__', '__doc__': 'Configuration settings for the training pipeline.\n    \n    This class centralizes all the configuration parameters for the training process,\n    making it easier to modify settings in one place.\n    ', 'INPUT_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/categorized_images', 'OUTPUT_DIR': 'outputs', 'BALANCED_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/balanced_images', 'BATCH_SIZE': 128, 'EPOCHS': 1, 'LEARNING_RATE': 0.001, 'gpus': [], 'DEVICE': '/CPU:0', '__dict__': <attribute '__dict__' of 'Config' objects>, '__weakref__': <attribute '__weakref__' of 'Config' objects>}
+2025-01-01 23:38:22,920 - INFO - Using device: /CPU:0
+2025-01-01 23:38:22,920 - INFO - Preparing datasets...
+2025-01-01 23:38:23,228 - INFO - Train dataset size: 16121
+2025-01-01 23:38:23,228 - INFO - Validation dataset size: 5374
+2025-01-01 23:38:23,228 - INFO - Test dataset size: 5374
+2025-01-01 23:38:23,758 - INFO - Starting training...
+2025-01-01 23:38:23,758 - INFO - Starting model training...
+2025-01-01 23:40:31,250 - WARNING - No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
+2025-01-01 23:40:31,332 - INFO - Evaluating model...
+2025-01-01 23:40:31,332 - INFO - Evaluating model on test dataset...
+2025-01-01 23:40:39,297 - INFO - Test Results:
+2025-01-01 23:40:39,297 - INFO - binary_accuracy: 0.6055
+2025-01-01 23:40:39,297 - INFO - loss: 0.6965
+2025-01-01 23:40:39,297 - INFO - Saving final model...
+2025-01-01 23:40:39,297 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-01-01 23:40:39,413 - INFO - Training completed successfully!
+2025-01-01 23:42:50,169 - INFO - Starting training with configuration: {'__module__': '__main__', '__doc__': 'Configuration settings for the training pipeline.\n    \n    This class centralizes all the configuration parameters for the training process,\n    making it easier to modify settings in one place.\n    ', 'INPUT_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/categorized_images', 'OUTPUT_DIR': 'outputs', 'BALANCED_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/balanced_images', 'BATCH_SIZE': 128, 'EPOCHS': 500, 'LEARNING_RATE': 0.001, 'gpus': [], 'DEVICE': '/CPU:0', '__dict__': <attribute '__dict__' of 'Config' objects>, '__weakref__': <attribute '__weakref__' of 'Config' objects>}
+2025-01-01 23:42:50,169 - INFO - Using device: /CPU:0
+2025-01-01 23:42:50,170 - INFO - Preparing datasets...
+2025-01-01 23:42:50,470 - INFO - Train dataset size: 16121
+2025-01-01 23:42:50,470 - INFO - Validation dataset size: 5374
+2025-01-01 23:42:50,470 - INFO - Test dataset size: 5374
+2025-01-01 23:42:51,007 - INFO - Starting training...
+2025-01-01 23:42:51,007 - INFO - Starting model training...
+2025-01-01 23:46:12,771 - ERROR - Error during execution: Graph execution error:
+
+Detected at node AddN_54 defined at (most recent call last):
+  File "/Users/francesco/Repository/computer_vision_project/tensorflow/main.py", line 120, in <module>
+
+  File "/Users/francesco/Repository/computer_vision_project/tensorflow/main.py", line 93, in main
+
+  File "/Users/francesco/Repository/computer_vision_project/tensorflow/train.py", line 147, in train_model
+
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/keras/src/utils/traceback_utils.py", line 117, in error_handler
+
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/keras/src/backend/tensorflow/trainer.py", line 318, in fit
+
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/keras/src/backend/tensorflow/trainer.py", line 121, in one_step_on_iterator
+
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/keras/src/backend/tensorflow/trainer.py", line 108, in one_step_on_data
+
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/keras/src/backend/tensorflow/trainer.py", line 70, in train_step
+
+Inputs to operation StatefulPartitionedCall/AddN_54 of type AddN must have the same size and shape.  Input 0: [128,14,14,120] != input 1: [0]
+	 [[{{node AddN_54}}]] [Op:__inference_one_step_on_iterator_33243]
+Traceback (most recent call last):
+  File "/Users/francesco/Repository/computer_vision_project/tensorflow/main.py", line 93, in main
+    history = train_model(
+              ^^^^^^^^^^^^
+  File "/Users/francesco/Repository/computer_vision_project/tensorflow/train.py", line 147, in train_model
+    history = model.fit(
+              ^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/keras/src/utils/traceback_utils.py", line 122, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/tensorflow/python/eager/execute.py", line 59, in quick_execute
+    except TypeError as e:
+tensorflow.python.framework.errors_impl.InvalidArgumentError: Graph execution error:
+
+Detected at node AddN_54 defined at (most recent call last):
+  File "/Users/francesco/Repository/computer_vision_project/tensorflow/main.py", line 120, in <module>
+
+  File "/Users/francesco/Repository/computer_vision_project/tensorflow/main.py", line 93, in main
+
+  File "/Users/francesco/Repository/computer_vision_project/tensorflow/train.py", line 147, in train_model
+
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/keras/src/utils/traceback_utils.py", line 117, in error_handler
+
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/keras/src/backend/tensorflow/trainer.py", line 318, in fit
+
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/keras/src/backend/tensorflow/trainer.py", line 121, in one_step_on_iterator
+
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/keras/src/backend/tensorflow/trainer.py", line 108, in one_step_on_data
+
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/keras/src/backend/tensorflow/trainer.py", line 70, in train_step
+
+Inputs to operation StatefulPartitionedCall/AddN_54 of type AddN must have the same size and shape.  Input 0: [128,14,14,120] != input 1: [0]
+	 [[{{node AddN_54}}]] [Op:__inference_one_step_on_iterator_33243]
+2025-01-01 23:48:31,625 - INFO - Starting training with configuration: {'__module__': '__main__', '__doc__': 'Configuration settings for the training pipeline.\n    \n    This class centralizes all the configuration parameters for the training process,\n    making it easier to modify settings in one place.\n    ', 'INPUT_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/categorized_images', 'OUTPUT_DIR': 'outputs', 'BALANCED_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/balanced_images', 'BATCH_SIZE': 128, 'EPOCHS': 500, 'LEARNING_RATE': 0.001, 'gpus': [], 'DEVICE': '/CPU:0', '__dict__': <attribute '__dict__' of 'Config' objects>, '__weakref__': <attribute '__weakref__' of 'Config' objects>}
+2025-01-01 23:48:31,625 - INFO - Using device: /CPU:0
+2025-01-01 23:48:31,625 - INFO - Preparing datasets...
+2025-01-01 23:48:31,993 - INFO - Train dataset size: 16121
+2025-01-01 23:48:31,993 - INFO - Validation dataset size: 5374
+2025-01-01 23:48:31,993 - INFO - Test dataset size: 5374
+2025-01-01 23:48:32,479 - INFO - Starting training...
+2025-01-01 23:48:32,479 - INFO - Starting model training...
+2025-01-02 00:46:33,594 - INFO - Restoring model weights from epoch 22
+2025-01-02 00:46:34,033 - INFO - Early stopping triggered at epoch 30
+2025-01-02 00:46:34,139 - WARNING - No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
+2025-01-02 00:46:34,229 - INFO - Evaluating model...
+2025-01-02 00:46:34,229 - INFO - Evaluating model on test dataset...
+2025-01-02 00:46:41,824 - INFO - Test Results:
+2025-01-02 00:46:41,824 - INFO - binary_accuracy: 0.9632
+2025-01-02 00:46:41,824 - INFO - loss: 0.1146
+2025-01-02 00:46:41,824 - INFO - Saving final model...
+2025-01-02 00:46:41,959 - INFO - Training completed successfully!
+2025-01-02 22:49:24,516 - INFO - Starting training with configuration: {'__module__': '__main__', '__doc__': 'Configuration settings for the training pipeline.\n    \n    This class centralizes all the configuration parameters for the training process,\n    making it easier to modify settings in one place.\n    ', 'INPUT_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/categorized_images', 'OUTPUT_DIR': 'outputs', 'BALANCED_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/balanced_images', 'BATCH_SIZE': 128, 'EPOCHS': 1, 'LEARNING_RATE': 0.001, 'gpus': [], 'DEVICE': '/CPU:0', '__dict__': <attribute '__dict__' of 'Config' objects>, '__weakref__': <attribute '__weakref__' of 'Config' objects>}
+2025-01-02 22:49:24,516 - INFO - Using device: /CPU:0
+2025-01-02 22:49:24,517 - INFO - Preparing datasets...
+2025-01-02 22:49:24,825 - INFO - Train dataset size: 16121
+2025-01-02 22:49:24,825 - INFO - Validation dataset size: 5374
+2025-01-02 22:49:24,825 - INFO - Test dataset size: 5374
+2025-01-02 22:49:25,121 - INFO - Starting training...
+2025-01-02 22:49:25,122 - INFO - Starting model training...
+2025-01-02 22:51:29,865 - WARNING - No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
+2025-01-02 22:51:29,955 - INFO - Evaluating model...
+2025-01-02 22:51:29,955 - INFO - Evaluating model on test dataset...
+2025-01-02 22:51:37,807 - INFO - Test Results:
+2025-01-02 22:51:37,807 - INFO - binary_accuracy: 0.6055
+2025-01-02 22:51:37,807 - INFO - loss: 0.6809
+2025-01-02 22:51:37,807 - INFO - Saving final model...
+2025-01-02 22:51:37,925 - INFO - Training completed successfully!
+2025-01-02 22:59:59,504 - INFO - Starting training with configuration: {'__module__': '__main__', '__doc__': 'Configuration settings for the training pipeline.\n    \n    This class centralizes all the configuration parameters for the training process,\n    making it easier to modify settings in one place.\n    ', 'INPUT_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/categorized_images', 'OUTPUT_DIR': 'outputs', 'BALANCED_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/balanced_images', 'BATCH_SIZE': 128, 'EPOCHS': 1, 'LEARNING_RATE': 0.001, 'gpus': [], 'DEVICE': '/CPU:0', '__dict__': <attribute '__dict__' of 'Config' objects>, '__weakref__': <attribute '__weakref__' of 'Config' objects>}
+2025-01-02 22:59:59,504 - INFO - Using device: /CPU:0
+2025-01-02 22:59:59,505 - INFO - Preparing datasets...
+2025-01-02 22:59:59,810 - INFO - Train dataset size: 16121
+2025-01-02 22:59:59,810 - INFO - Validation dataset size: 5374
+2025-01-02 22:59:59,810 - INFO - Test dataset size: 5374
+2025-01-02 23:00:00,101 - INFO - Starting training...
+2025-01-02 23:00:00,101 - INFO - Starting model training...
+2025-01-02 23:02:01,003 - WARNING - No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
+2025-01-02 23:02:01,102 - INFO - Evaluating model...
+2025-01-02 23:02:01,102 - INFO - Evaluating model on test dataset...
+2025-01-02 23:02:08,944 - INFO - Test Results:
+2025-01-02 23:02:08,944 - INFO - binary_accuracy: 0.6055
+2025-01-02 23:02:08,944 - INFO - loss: 0.6827
+2025-01-02 23:02:08,944 - INFO - Saving final model...
+2025-01-02 23:02:08,944 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-01-02 23:02:09,052 - INFO - Training completed successfully!
+2025-01-02 23:21:06,119 - INFO - Starting training with configuration: {'__module__': '__main__', '__doc__': 'Configuration settings for the training pipeline.\n    \n    This class centralizes all the configuration parameters for the training process,\n    making it easier to modify settings in one place.\n    ', 'INPUT_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/categorized_images', 'OUTPUT_DIR': 'outputs', 'BALANCED_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/balanced_images', 'BATCH_SIZE': 128, 'EPOCHS': 1, 'LEARNING_RATE': 0.001, 'gpus': [], 'DEVICE': '/CPU:0', '__dict__': <attribute '__dict__' of 'Config' objects>, '__weakref__': <attribute '__weakref__' of 'Config' objects>}
+2025-01-02 23:21:06,119 - INFO - Using device: /CPU:0
+2025-01-02 23:21:06,120 - INFO - Preparing datasets...
+2025-01-02 23:21:06,485 - INFO - Train dataset size: 16121
+2025-01-02 23:21:06,485 - INFO - Validation dataset size: 5374
+2025-01-02 23:21:06,485 - INFO - Test dataset size: 5374
+2025-01-02 23:21:06,507 - ERROR - Error during execution: Argument `name` must be a string and cannot contain character `/`. Received: name=block_1/expand (of type <class 'str'>)
+Traceback (most recent call last):
+  File "/Users/francesco/Repository/computer_vision_project/tensorflow/main.py", line 89, in main
+    model = create_mobile_model(num_classes=1)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/francesco/Repository/computer_vision_project/tensorflow/model.py", line 230, in create_mobile_model
+    x = Block(*config)(x)
+        ^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/keras/src/utils/traceback_utils.py", line 122, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "/Users/francesco/Repository/computer_vision_project/tensorflow/model.py", line 107, in build
+    self.expand_conv = layers.Conv2D(
+                       ^^^^^^^^^^^^^^
+ValueError: Argument `name` must be a string and cannot contain character `/`. Received: name=block_1/expand (of type <class 'str'>)
+2025-01-02 23:32:18,236 - INFO - Starting training with configuration: {'__module__': '__main__', '__doc__': 'Configuration settings for the training pipeline.\n    \n    This class centralizes all the configuration parameters for the training process,\n    making it easier to modify settings in one place.\n    ', 'INPUT_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/categorized_images', 'OUTPUT_DIR': 'outputs', 'BALANCED_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/balanced_images', 'BATCH_SIZE': 128, 'EPOCHS': 1, 'LEARNING_RATE': 0.001, 'gpus': [], 'DEVICE': '/CPU:0', '__dict__': <attribute '__dict__' of 'Config' objects>, '__weakref__': <attribute '__weakref__' of 'Config' objects>}
+2025-01-02 23:32:18,236 - INFO - Using device: /CPU:0
+2025-01-02 23:32:18,237 - INFO - Preparing datasets...
+2025-01-02 23:32:18,547 - INFO - Train dataset size: 16121
+2025-01-02 23:32:18,547 - INFO - Validation dataset size: 5374
+2025-01-02 23:32:18,547 - INFO - Test dataset size: 5374
+2025-01-02 23:32:18,569 - ERROR - Error during execution: Argument `name` must be a string and cannot contain character `/`. Received: name=block_1/expand_bn (of type <class 'str'>)
+Traceback (most recent call last):
+  File "/Users/francesco/Repository/computer_vision_project/tensorflow/main.py", line 89, in main
+    model = create_mobile_model(num_classes=1)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/francesco/Repository/computer_vision_project/tensorflow/model.py", line 230, in create_mobile_model
+    x = Block(*config)(x)
+        ^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/cvproj/lib/python3.12/site-packages/keras/src/utils/traceback_utils.py", line 122, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "/Users/francesco/Repository/computer_vision_project/tensorflow/model.py", line 114, in build
+    self.expand_bn = layers.BatchNormalization(name=f'{self.name}/expand_bn')
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Argument `name` must be a string and cannot contain character `/`. Received: name=block_1/expand_bn (of type <class 'str'>)
+2025-01-02 23:33:27,563 - INFO - Starting training with configuration: {'__module__': '__main__', '__doc__': 'Configuration settings for the training pipeline.\n    \n    This class centralizes all the configuration parameters for the training process,\n    making it easier to modify settings in one place.\n    ', 'INPUT_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/categorized_images', 'OUTPUT_DIR': 'outputs', 'BALANCED_DIR': '/Users/francesco/Repository/computer_vision_project/dataset/mix_dataset/balanced_images', 'BATCH_SIZE': 128, 'EPOCHS': 1, 'LEARNING_RATE': 0.001, 'gpus': [], 'DEVICE': '/CPU:0', '__dict__': <attribute '__dict__' of 'Config' objects>, '__weakref__': <attribute '__weakref__' of 'Config' objects>}
+2025-01-02 23:33:27,563 - INFO - Using device: /CPU:0
+2025-01-02 23:33:27,564 - INFO - Preparing datasets...
+2025-01-02 23:33:27,870 - INFO - Train dataset size: 16121
+2025-01-02 23:33:27,870 - INFO - Validation dataset size: 5374
+2025-01-02 23:33:27,870 - INFO - Test dataset size: 5374
+2025-01-02 23:33:28,162 - INFO - Starting training...
+2025-01-02 23:33:28,162 - INFO - Starting model training...
+2025-01-02 23:35:32,754 - WARNING - No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
+2025-01-02 23:35:32,832 - INFO - Evaluating model...
+2025-01-02 23:35:32,832 - INFO - Evaluating model on test dataset...
+2025-01-02 23:35:40,450 - INFO - Test Results:
+2025-01-02 23:35:40,450 - INFO - binary_accuracy: 0.6055
+2025-01-02 23:35:40,450 - INFO - loss: 0.7070
+2025-01-02 23:35:40,450 - INFO - Saving final model...
+2025-01-02 23:35:40,450 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-01-02 23:35:40,549 - INFO - Training completed successfully!
