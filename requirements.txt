@@ -12,6 +12,7 @@ tqdm
 opencv-python
 omegaconf
 hydra-core
+ultralytics
 
 
 
