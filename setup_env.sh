@@ -46,10 +46,18 @@ setup_macos() {
 
     echo "📦 Installing PyTorch for M1..."
     pip install --pre torch torchvision --index-url https://download.pytorch.org/whl/nightly/cpu
+
+    # Install TensorFlow for M1
+    echo "📦 Installing TensorFlow for M1..."
+    pip install tensorflow-macos==2.18.0
+    pip install tensorflow-metal==1.1.0
+
+
     echo "📦 Installing additional packages..."
     pip install ultralytics==8.3.58 ultralytics-thop==2.0.13
     pip install onnx==1.17.0 onnxruntime==1.20.1
     pip install psutil==6.1.1 requests==2.32.3 filelock==3.13.1 rich==13.9.4
+    pip install ipykernel
 
     echo "✅ MacOS M1 setup completed successfully!"
 }

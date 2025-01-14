@@ -2,17 +2,19 @@ import tensorflow as tf
 import numpy as np
 import os
 import shutil
-import pathlib
-from sklearn.utils import resample
+from pathlib import Path
+from sklearn.utils import resample, shuffle
 from sklearn.model_selection import train_test_split
 import logging
 from PIL import Image
 from typing import Tuple, List
+from ultralytics import YOLO
+import pandas as pd
 
 class SkinLesionDataset:
-    def __init__(self, image_paths: List[str], labels: List[int], is_training: bool = False):
-        self.image_paths = image_paths
-        self.labels = labels
+    def __init__(self, metadata_df: pd.DataFrame, is_training: bool = False):
+        self.image_paths = metadata_df['image_path'].tolist()
+        self.labels = metadata_df['label'].tolist()
         self.is_training = is_training
 
     def _augment(self, image):
@@ -24,8 +26,10 @@ class SkinLesionDataset:
         image = tf.image.random_brightness(image, 0.2)
         image = tf.image.random_contrast(image, 0.8, 1.2)
         image = tf.image.random_saturation(image, 0.8, 1.2)
+
+        angle = tf.random.uniform([], -0.2, 0.2)
+        image = tf.image.rot90(image, k=tf.cast(angle / (np.pi/2), tf.int32))
         image = tf.clip_by_value(image, 0.0, 1.0)
-        
         return image
 
     def _load_and_preprocess_image(self, path):
@@ -35,7 +39,6 @@ class SkinLesionDataset:
         img = tf.image.resize_with_pad(img, 224, 224)
         if self.is_training:
             img = self._augment(img)
-        
         return img
 
     def create_dataset(self, batch_size: int, shuffle: bool = False):
@@ -60,57 +63,64 @@ class SkinLesionDataset:
         
         return dataset
 
-def prepare_datasets(data_dir: str, batch_size: int = 32):
-    data_dir = pathlib.Path(data_dir)
+def prepare_datasets(metadata_path: str, image_dir: str, imbalance_factor=1.2, random_state=123, batch_size=32):
+    df = pd.read_csv(metadata_path)
+    image_dir = Path(image_dir)
 
-    if not data_dir.exists():
-        raise ValueError(f"Data directory does not exist: {data_dir}")
+    # (0: benign, 1: malignant)
+    df['label'] = (df['benign_malignant'] == 'malignant').astype(int)
+    df['image_path'] = df['image_name'].apply(lambda x: str(image_dir / f"{x}.jpg"))
+    df = df[df['image_path'].apply(lambda x: Path(x).exists())]
 
-    class_names = sorted(item.name for item in data_dir.glob('*/') if item.is_dir())
-    if not class_names:
-        raise ValueError(f"No class directories found in {data_dir}")
-    
-    image_paths = []
-    labels = []
-    
-    for class_idx, class_name in enumerate(class_names):
-        class_dir = data_dir / class_name
-        class_paths = list(class_dir.glob('*.[jp][pn][g]'))
-        if not class_paths:
-            logging.warning(f"No images found in class directory: {class_dir}")
-        image_paths.extend([str(path) for path in class_paths])
-        labels.extend([class_idx] * len(class_paths))
-    
-    if not image_paths:
-        raise ValueError(
-            f"No valid images found in any class directory under {data_dir}. "
-            "Please ensure the directory structure is correct and contains .jpg, .jpeg, or .png files."
-        )
-    
-    # Split data
-    train_paths, temp_paths, train_labels, temp_labels = train_test_split(
-        image_paths, labels, test_size=0.4, stratify=labels, random_state=42
+    benign_samples = df[df['label'] == 0]
+    malignant_samples = df[df['label'] == 1]
+
+    logging.info(f"Original distribution:")
+    logging.info(f"Benign samples: {len(benign_samples)}")
+    logging.info(f"Malignant samples: {len(malignant_samples)}")
+
+    target_malignant = len(malignant_samples)
+    target_benign = int(target_malignant * imbalance_factor)
+
+    if len(benign_samples) > target_benign:
+        benign_reduced = benign_samples.sample(n=target_benign, random_state=random_state)
+    else:
+        benign_reduced = benign_samples
+
+    balanced_df = pd.concat([benign_reduced, malignant_samples]).reset_index(drop=True)
+    balanced_df = shuffle(balanced_df, random_state=random_state)
+
+    logging.info(f"Reduced distribution with slight imbalance (factor={imbalance_factor}):")
+    logging.info(balanced_df['label'].value_counts())
+
+    train_df, temp_df = train_test_split(
+        balanced_df, 
+        test_size=0.4, 
+        stratify=balanced_df['label'], 
+        random_state=random_state
     )
-    
-    val_paths, test_paths, val_labels, test_labels = train_test_split(
-        temp_paths, temp_labels, test_size=0.5, stratify=temp_labels, random_state=42
+    val_df, test_df = train_test_split(
+        temp_df, 
+        test_size=0.5, 
+        stratify=temp_df['label'], 
+        random_state=random_state
     )
-    
-    # Create datasets
     train_dataset = SkinLesionDataset(
-        train_paths, train_labels, is_training=True
-    ).create_dataset(batch_size, shuffle=True)
-    
+        train_df, 
+        is_training=True
+    )
     val_dataset = SkinLesionDataset(
-        val_paths, val_labels, is_training=False
-    ).create_dataset(batch_size)
-    
+        val_df,
+        is_training=False
+    )
     test_dataset = SkinLesionDataset(
-        test_paths, test_labels, is_training=False
-    ).create_dataset(batch_size)
-    
-    logging.info(f'Train dataset size: {len(train_paths)}')
-    logging.info(f'Validation dataset size: {len(val_paths)}')
-    logging.info(f'Test dataset size: {len(test_paths)}')
-    
-    return train_dataset, val_dataset, test_dataset
+        test_df,  
+        is_training=False
+    )
+
+    return (
+        train_dataset.create_dataset(batch_size=batch_size, shuffle=True),
+        val_dataset.create_dataset(batch_size=batch_size),
+        test_dataset.create_dataset(batch_size=batch_size)
+    )
+
