@@ -10,12 +10,15 @@ from yolo_setup import YOLOProcessor
 from tqdm import tqdm
 
 class ModelEvaluator:
-    def __init__(self, skc_model_path, yolo_model_path, dataset_csv_path, img_dir, target_size=(224,224)):
+    def __init__(self, skc_model_path, yolo_model_path, dataset_csv_path, img_dir, target_size=(224,224), balance_factor=1.2, reduction_factor=1):
         self.skc_model_path = skc_model_path
         self.yolo_model_path = yolo_model_path
-        self.dataset_df = pd.read_csv(dataset_csv_path)
         self.img_dir = Path(img_dir)
         self.target_size = target_size
+        self.balance_factor = balance_factor
+        self.reduction_factor = reduction_factor
+
+        self.dataset_df = self.prepare_balanced_dataset(dataset_csv_path)
         self.setup_model()
         self.yolo_processor = YOLOProcessor(self.yolo_model_path, conf_threshold=0.4)
 
@@ -34,6 +37,38 @@ class ModelEvaluator:
         img = tf.cast(img, tf.float32) / 255.0
         img = tf.image.resize_with_pad(img, self.target_size[0], self.target_size[1])
         return img.numpy()
+    
+    def prepare_balanced_dataset(self, dataset_csv_path):
+        df = pd.read_csv(dataset_csv_path)
+
+        malignant_df = df[df['benign_malignant'] == 'malignant']
+        benign_df = df[df['benign_malignant'] == 'benign']
+
+        n_malignant = len(malignant_df)
+        target_benign = int(n_malignant * self.balance_factor)
+        print(f"\nOriginal distribution:")
+        print(f"Malignant samples: {n_malignant}")
+        print(f"Benign samples: {len(benign_df)}")
+
+        # Dataset balancing
+        if len(benign_df) > target_benign:
+            benign_df = benign_df.sample(n=target_benign, random_state=123)
+        balanced_df = pd.concat([malignant_df, benign_df])
+
+        # Dataset reduction
+        if self.reduction_factor < 1.0:
+            total_samples = len(balanced_df)
+            target_samples = int(total_samples * self.reduction_factor)
+            balanced_df = balanced_df.sample(n=target_samples, random_state=123)
+
+        final_malignant = len(balanced_df[balanced_df['benign_malignant'] == 'malignant'])
+        final_benign = len(balanced_df[balanced_df['benign_malignant'] == 'benign'])
+        print(f"\nFinal distribution after balancing and reduction:")
+        print(f"Malignant samples: {final_malignant}")
+        print(f"Benign samples: {final_benign}")
+        print(f"Total samples: {len(balanced_df)}")
+
+        return balanced_df
 
     def single_predict(self, img_path, conf_factor=0.5, use_yolo=False):
         try:

@@ -1,14 +1,23 @@
 from model_evaluator import ModelEvaluator
 
 def main():
-    skc_model_path = '/Users/francesco/repos/computer_vision_project/saved_models/skc_model.tflite'
-    yolo_model_path = '/Users/francesco/repos/computer_vision_project/saved_models/yolo_trained/yolo11n_float16.tflite'
+    skc_model_path = '/Users/francesco/repos/computer_vision_project/src/mole_bin_classifier/model_saved/skc_model.tflite'
+    yolo_model_path = '/Users/francesco/repos/computer_vision_project/src/mole_detector/yolo_train/train3/weights/best.pt'
     dataset_csv_path = '/Users/francesco/repos/computer_vision_project/dataset/mix_dataset/mix_dataset.csv'
     #image_dir = '/Users/francesco/repos/computer_vision_project/dataset/mix_dataset/train_images'
-    image_dir = '/Users/francesco/repos/computer_vision_project/dataset/mix_dataset/tobedeletemix'
+    image_dir = '/Users/francesco/repos/computer_vision_project/dataset/mix_dataset/all_images'
 
     conf_factor = 0.5
-    evaluator = ModelEvaluator(skc_model_path, yolo_model_path, dataset_csv_path, image_dir)
+    balance_factor = 1.1 # balance_factor = 3.0705727 to don't rebalance the dataset
+    reduction_factor = 0.1
+
+    evaluator = ModelEvaluator(skc_model_path=skc_model_path, 
+                               yolo_model_path=yolo_model_path, 
+                               dataset_csv_path=dataset_csv_path, 
+                               img_dir=image_dir,
+                               balance_factor=balance_factor,
+                               reduction_factor=reduction_factor
+                               )
 
     print("\nEvaluate skc Model Only...")
     skc_model_metrics = evaluator.evaluate_model(conf_factor=conf_factor, use_yolo=False)
