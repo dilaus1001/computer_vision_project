@@ -1,0 +1,27 @@
+2025-01-04 03:26:54,092 - INFO - Starting model testing...
+2025-01-04 03:26:54,092 - INFO - Loading test dataset...
+2025-01-04 03:26:54,473 - INFO - Train dataset size: 16121
+2025-01-04 03:26:54,473 - INFO - Validation dataset size: 5374
+2025-01-04 03:26:54,473 - INFO - Test dataset size: 5374
+2025-01-04 03:26:54,475 - INFO - Loading trained model...
+2025-01-04 03:26:54,828 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-01-04 03:26:54,846 - INFO - Making predictions...
+2025-01-04 03:27:10,244 - INFO - Generating visualizations...
+2025-01-04 03:27:10,493 - INFO - ROC AUC Score: 0.9893
+2025-01-04 03:27:10,493 - INFO - 
+Classification Report:
+2025-01-04 03:27:10,498 - INFO - 
+              precision    recall  f1-score      support
+Benign         0.958683  0.984020  0.971186  3254.000000
+Malignant      0.974435  0.934906  0.954261  2120.000000
+accuracy       0.964645  0.964645  0.964645     0.964645
+macro avg      0.966559  0.959463  0.962723  5374.000000
+weighted avg   0.964897  0.964645  0.964509  5374.000000
+2025-01-04 03:27:10,498 - INFO - Testing completed successfully!
+2025-01-14 12:01:26,530 - INFO - Starting model testing...
+2025-01-14 12:01:26,531 - INFO - Loading test dataset...
+2025-01-14 12:01:26,531 - ERROR - Error during testing: prepare_datasets() got an unexpected keyword argument 'data_dir'
+Traceback (most recent call last):
+  File "/Users/francesco/repos/computer_vision_project/src/mole_bin_classifier/test.py", line 118, in main
+    _, _, test_dataset = prepare_datasets(
+TypeError: prepare_datasets() got an unexpected keyword argument 'data_dir'

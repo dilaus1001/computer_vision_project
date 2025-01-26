@@ -1,0 +1,105 @@
+(cvproj) francesco@Francescos-MacBook-Pro src % python intergration_main.py
+
+Original distribution:
+Malignant samples: 10599
+Benign samples: 32542
+
+Final distribution after balancing and reduction:
+Malignant samples: 1029
+Benign samples: 1196
+Total samples: 2225
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+Evaluate skc Model Only...
+Evaluating SKC Model Only: 100%|████████| 2225/2225 [01:37<00:00, 22.82it/s, not_found=0, processed=4450]
+
+Final Statistics:
+Total images in dataset: 2225
+Files not found: 0
+Successfully processed: 4450
+Success rate: 200.00%
+
+skc Model Only Accuracy: 0.5789
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.56      0.97      0.71      1196
+           1       0.79      0.12      0.21      1029
+
+    accuracy                           0.58      2225
+   macro avg       0.68      0.55      0.46      2225
+weighted avg       0.67      0.58      0.48      2225
+
+
+Evaluating Full Pipeline (with YOLO)...
+Evaluating Full Pipeline:   0%|                                                 | 0/2225 [00:00<?, ?it/s]Loading /Users/francesco/repos/computer_vision_project/saved_models/yolo_trained/yolo11n_float16.tflite for TensorFlow Lite inference...
+Evaluating Full Pipeline:   0%|             | 10/2225 [00:01<06:05,  6.05it/s, not_found=0, processed=20]YOLO processing failed for /Users/francesco/repos/computer_vision_project/dataset/mix_dataset/all_images/ISIC_4128342.jpg
+Evaluating Full Pipeline:   2%|▎            | 46/2225 [00:07<04:54,  7.41it/s, not_found=0, processed=90]YOLO processing failed for /Users/francesco/repos/computer_vision_project/dataset/mix_dataset/all_images/ISIC_0025557.jpg
+Evaluating Full Pipeline:   3%|▎           | 56/2225 [00:08<04:45,  7.59it/s, not_found=0, processed=100]YOLO processing failed for /Users/francesco/repos/computer_vision_project/dataset/mix_dataset/all_images/ISIC_9690239.jpg
+Evaluating Full Pipeline:   4%|▍           | 87/2225 [00:13<06:56,  5.13it/s, not_found=0, processed=160]YOLO processing failed for /Users/francesco/repos/computer_vision_project/dataset/mix_dataset/all_images/ISIC_9789769.jpg
+Evaluating Full Pipeline:   8%|▉          | 185/2225 [00:28<05:23,  6.31it/s, not_found=0, processed=360]YOLO processing failed for /Users/francesco/repos/computer_vision_project/dataset/mix_dataset/all_images/ISIC_6901340.jpg
+Evaluating Full Pipeline:  14%|█▍         | 303/2225 [00:46<05:50,  5.48it/s, not_found=0, processed=590]YOLO processing failed for /Users/francesco/repos/computer_vision_project/dataset/mix_dataset/all_images/ISIC_4731097.jpg
+Evaluating Full Pipeline:  20%|██▏        | 445/2225 [01:07<03:48,  7.79it/s, not_found=0, processed=870]YOLO processing failed for /Users/francesco/repos/computer_vision_project/dataset/mix_dataset/all_images/ISIC_3420087.jpg
+Evaluating Full Pipeline:  22%|██▍        | 481/2225 [01:13<03:52,  7.49it/s, not_found=0, processed=940]YOLO processing failed for /Users/francesco/repos/computer_vision_project/dataset/mix_dataset/all_images/ISIC_1669561.jpg
+Evaluating Full Pipeline:  23%|██▌        | 506/2225 [01:17<05:12,  5.49it/s, not_found=0, processed=990]YOLO processing failed for /Users/francesco/repos/computer_vision_project/dataset/mix_dataset/all_images/ISIC_1044290.jpg
+Evaluating Full Pipeline:  29%|██▉       | 645/2225 [01:40<05:01,  5.24it/s, not_found=0, processed=1270]YOLO processing failed for /Users/francesco/repos/computer_vision_project/dataset/mix_dataset/all_images/ISIC_3956937.jpg
+Evaluating Full Pipeline:  30%|███       | 668/2225 [01:43<03:54,  6.63it/s, not_found=0, processed=1310]YOLO processing failed for /Users/francesco/repos/computer_vision_project/dataset/mix_dataset/all_images/ISIC_3801938.jpg
+Evaluating Full Pipeline:  31%|███       | 680/2225 [01:45<03:57,  6.50it/s, not_found=0, processed=1330]YOLO processing failed for /Users/francesco/repos/computer_vision_project/dataset/mix_dataset/all_images/ISIC_4891451.jpg
+Evaluating Full Pipeline:  31%|███▏      | 699/2225 [01:49<04:10,  6.09it/s, not_found=0, processed=1370]YOLO processing failed for /Users/francesco/repos/computer_vision_project/dataset/mix_dataset/all_images/ISIC_5273043.jpg
+Evaluating Full Pipeline:  32%|███▏      | 711/2225 [01:50<03:44,  6.73it/s, not_found=0, processed=1390]YOLO processing failed for /Users/francesco/repos/computer_vision_project/dataset/mix_dataset/all_images/ISIC_0027425.jpg
+Evaluating Full Pipeline:  34%|███▎      | 748/2225 [01:56<04:35,  5.36it/s, not_found=0, processed=1460]YOLO processing failed for /Users/francesco/repos/computer_vision_project/dataset/mix_dataset/all_images/ISIC_1172952.jpg
+Evaluating Full Pipeline:  34%|███▍      | 758/2225 [01:58<03:48,  6.43it/s, not_found=0, processed=1480]YOLO processing failed for /Users/francesco/repos/computer_vision_project/dataset/mix_dataset/all_images/ISIC_3882251.jpg
+Evaluating Full Pipeline:  40%|███▉      | 887/2225 [02:18<04:03,  5.50it/s, not_found=0, processed=1740]YOLO processing failed for /Users/francesco/repos/computer_vision_project/dataset/mix_dataset/all_images/ISIC_5369000.jpg
+Evaluating Full Pipeline:  41%|████▏     | 918/2225 [02:22<03:12,  6.78it/s, not_found=0, processed=1800]YOLO processing failed for /Users/francesco/repos/computer_vision_project/dataset/mix_dataset/all_images/ISIC_9627139.jpg
+Evaluating Full Pipeline:  42%|████▏     | 937/2225 [02:25<03:14,  6.62it/s, not_found=0, processed=1830]YOLO processing failed for /Users/francesco/repos/computer_vision_project/dataset/mix_dataset/all_images/ISIC_0030081.jpg
+Evaluating Full Pipeline:  43%|████▎     | 957/2225 [02:28<02:36,  8.11it/s, not_found=0, processed=1870]YOLO processing failed for /Users/francesco/repos/computer_vision_project/dataset/mix_dataset/all_images/ISIC_4602983.jpg
+Evaluating Full Pipeline:  46%|████     | 1016/2225 [02:37<02:46,  7.24it/s, not_found=0, processed=1990]YOLO processing failed for /Users/francesco/repos/computer_vision_project/dataset/mix_dataset/all_images/ISIC_0030064.jpg
+Evaluating Full Pipeline:  46%|████▏    | 1026/2225 [02:38<03:28,  5.74it/s, not_found=0, processed=2010]YOLO processing failed for /Users/francesco/repos/computer_vision_project/dataset/mix_dataset/all_images/ISIC_8600650.jpg
+Evaluating Full Pipeline:  49%|████▍    | 1094/2225 [02:49<02:33,  7.38it/s, not_found=0, processed=2140]YOLO processing failed for /Users/francesco/repos/computer_vision_project/dataset/mix_dataset/all_images/ISIC_0030690.jpg
+Evaluating Full Pipeline:  53%|████▊    | 1181/2225 [03:03<02:28,  7.05it/s, not_found=0, processed=2310]YOLO processing failed for /Users/francesco/repos/computer_vision_project/dataset/mix_dataset/all_images/ISIC_9599678.jpg
+Evaluating Full Pipeline:  62%|█████▌   | 1372/2225 [03:32<02:09,  6.60it/s, not_found=0, processed=2690]YOLO processing failed for /Users/francesco/repos/computer_vision_project/dataset/mix_dataset/all_images/ISIC_6973807.jpg
+Evaluating Full Pipeline:  62%|█████▌   | 1384/2225 [03:35<02:20,  5.97it/s, not_found=0, processed=2710]YOLO processing failed for /Users/francesco/repos/computer_vision_project/dataset/mix_dataset/all_images/ISIC_4636840.jpg
+Evaluating Full Pipeline:  67%|██████   | 1490/2225 [03:51<01:36,  7.62it/s, not_found=0, processed=2920]YOLO processing failed for /Users/francesco/repos/computer_vision_project/dataset/mix_dataset/all_images/ISIC_3533204.jpg
+Evaluating Full Pipeline:  69%|██████▏  | 1533/2225 [03:57<01:36,  7.18it/s, not_found=0, processed=3010]YOLO processing failed for /Users/francesco/repos/computer_vision_project/dataset/mix_dataset/all_images/ISIC_5540401.jpg
+Evaluating Full Pipeline:  72%|██████▌  | 1612/2225 [04:09<01:19,  7.69it/s, not_found=0, processed=3160]YOLO processing failed for /Users/francesco/repos/computer_vision_project/dataset/mix_dataset/all_images/ISIC_2360676.jpg
+Evaluating Full Pipeline:  79%|███████▏ | 1763/2225 [04:32<01:39,  4.66it/s, not_found=0, processed=3460]YOLO processing failed for /Users/francesco/repos/computer_vision_project/dataset/mix_dataset/all_images/ISIC_9069449.jpg
+Evaluating Full Pipeline:  81%|███████▎ | 1813/2225 [04:39<00:49,  8.27it/s, not_found=0, processed=3560]YOLO processing failed for /Users/francesco/repos/computer_vision_project/dataset/mix_dataset/all_images/ISIC_2944487.jpg
+Evaluating Full Pipeline:  86%|███████▊ | 1920/2225 [04:56<00:57,  5.33it/s, not_found=0, processed=3770]YOLO processing failed for /Users/francesco/repos/computer_vision_project/dataset/mix_dataset/all_images/ISIC_4360240.jpg
+Evaluating Full Pipeline:  87%|███████▊ | 1928/2225 [04:57<00:55,  5.33it/s, not_found=0, processed=3790]YOLO processing failed for /Users/francesco/repos/computer_vision_project/dataset/mix_dataset/all_images/ISIC_2010700.jpg
+Evaluating Full Pipeline:  89%|████████ | 1981/2225 [05:05<00:36,  6.76it/s, not_found=0, processed=3890]YOLO processing failed for /Users/francesco/repos/computer_vision_project/dataset/mix_dataset/all_images/ISIC_3562294.jpg
+Evaluating Full Pipeline:  90%|████████ | 2003/2225 [05:09<00:28,  7.71it/s, not_found=0, processed=3930]YOLO processing failed for /Users/francesco/repos/computer_vision_project/dataset/mix_dataset/all_images/ISIC_1253435.jpg
+Evaluating Full Pipeline:  91%|████████▏| 2027/2225 [05:12<00:24,  8.03it/s, not_found=0, processed=3980]YOLO processing failed for /Users/francesco/repos/computer_vision_project/dataset/mix_dataset/all_images/ISIC_1969066.jpg
+Evaluating Full Pipeline:  92%|████████▏| 2036/2225 [05:13<00:25,  7.28it/s, not_found=0, processed=4000]YOLO processing failed for /Users/francesco/repos/computer_vision_project/dataset/mix_dataset/all_images/ISIC_0032164.jpg
+Evaluating Full Pipeline:  92%|████████▎| 2056/2225 [05:16<00:25,  6.62it/s, not_found=0, processed=4030]YOLO processing failed for /Users/francesco/repos/computer_vision_project/dataset/mix_dataset/all_images/ISIC_5103854.jpg
+Evaluating Full Pipeline:  97%|████████▋| 2149/2225 [05:30<00:10,  7.56it/s, not_found=0, processed=4220]YOLO processing failed for /Users/francesco/repos/computer_vision_project/dataset/mix_dataset/all_images/ISIC_8314368.jpg
+Evaluating Full Pipeline: 100%|████████▉| 2214/2225 [05:39<00:01,  5.97it/s, not_found=0, processed=4350]YOLO processing failed for /Users/francesco/repos/computer_vision_project/dataset/mix_dataset/all_images/ISIC_3287917.jpg
+Evaluating Full Pipeline: 100%|████████▉| 2222/2225 [05:40<00:00,  8.10it/s, not_found=0, processed=4360]YOLO processing failed for /Users/francesco/repos/computer_vision_project/dataset/mix_dataset/all_images/ISIC_3338629.jpg
+Evaluating Full Pipeline: 100%|█████████| 2225/2225 [05:41<00:00,  6.52it/s, not_found=0, processed=4360]
+
+Final Statistics:
+Total images in dataset: 2225
+Files not found: 0
+Successfully processed: 4368
+Success rate: 196.31%
+
+Full Pipeline Accuracy: 0.9574
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.95      0.97      0.96      1163
+           1       0.96      0.95      0.95      1021
+
+    accuracy                           0.96      2184
+   macro avg       0.96      0.96      0.96      2184
+weighted avg       0.96      0.96      0.96      2184
+
+
+Accuracy Comparison:
+Custom Model Only: 0.5789
+Full Pipeline: 0.9574
+Accuracy Difference: 0.3785
+
+SKC model = tflite
+YOLO model = yolo11n_float16 

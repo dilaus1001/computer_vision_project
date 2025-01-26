@@ -1,0 +1,27 @@
+2025-01-14 12:04:50,211 - INFO - Testing log initialized. Output directory: outputs/test_results
+2025-01-14 12:04:50,211 - INFO - ==================================================
+2025-01-14 12:04:50,211 - INFO - Starting model testing...
+2025-01-14 12:04:50,211 - INFO - Loading test dataset...
+2025-01-14 12:04:51,633 - INFO - Original distribution:
+2025-01-14 12:04:51,633 - INFO - Benign samples: 32541
+2025-01-14 12:04:51,633 - INFO - Malignant samples: 10599
+2025-01-14 12:04:51,641 - INFO - Reduced distribution with slight imbalance (factor=1.2):
+2025-01-14 12:04:51,641 - INFO - label
+0    12718
+1    10599
+Name: count, dtype: int64
+2025-01-14 12:04:51,892 - INFO - Loading trained model...
+2025-01-14 12:04:52,297 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-01-14 12:04:52,308 - INFO - Making predictions...
+2025-01-14 12:05:32,103 - INFO - Generating visualizations and reports...
+2025-01-14 12:05:32,381 - INFO - ROC AUC Score: 0.9916
+2025-01-14 12:05:32,382 - INFO - 
+Classification Report:
+2025-01-14 12:05:32,385 - INFO - 
+              precision    recall  f1-score      support
+Benign         0.952667  0.996855  0.974260  2544.000000
+Malignant      0.996004  0.940566  0.967492  2120.000000
+accuracy       0.971269  0.971269  0.971269     0.971269
+macro avg      0.974336  0.968711  0.970876  4664.000000
+weighted avg   0.972366  0.971269  0.971184  4664.000000
+2025-01-14 12:05:32,385 - INFO - Testing completed successfully!

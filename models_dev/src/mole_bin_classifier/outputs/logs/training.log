@@ -1,0 +1,89 @@
+2025-01-15 03:36:56,993 - INFO - Starting training with configuration: {'__module__': '__main__', 'INPUT_DIR': PosixPath('/Users/francesco/repos/computer_vision_project/src/integration_pipeline/src'), 'OUTPUT_DIR': PosixPath('outputs'), 'MODEL_DIR': PosixPath('/Users/francesco/repos/computer_vision_project/src/mole_bin_classifier/model_saved'), 'METADATA_PATH': '/Users/francesco/repos/computer_vision_project/dataset/mix_dataset/mix_dataset.csv', 'IMAGES_DIR': PosixPath('/Users/francesco/repos/computer_vision_project/src/integration_pipeline/src/cropped_detections'), 'IMBALANCE_FACTOR': 1.2, 'BATCH_SIZE': 64, 'EPOCHS': 1000, 'LEARNING_RATE': 0.001, 'gpus': [], 'mps_devices': [], 'DEVICE': '/CPU:0', '__dict__': <attribute '__dict__' of 'Config' objects>, '__weakref__': <attribute '__weakref__' of 'Config' objects>, '__doc__': None}
+2025-01-15 03:36:56,993 - INFO - Using device: /CPU:0
+2025-01-15 03:36:56,993 - INFO - Preparing datasets...
+2025-01-15 03:36:57,818 - INFO - Original distribution:
+2025-01-15 03:36:57,818 - INFO - Benign samples: 32398
+2025-01-15 03:36:57,818 - INFO - Malignant samples: 10594
+2025-01-15 03:36:57,826 - INFO - Reduced distribution with slight imbalance (factor=1.2):
+2025-01-15 03:36:57,826 - INFO - label
+0    12712
+1    10594
+Name: count, dtype: int64
+2025-01-15 03:36:58,417 - INFO - Starting training...
+2025-01-15 03:36:58,417 - INFO - Starting model training...
+2025-01-15 03:37:15,482 - INFO - Starting training with configuration: {'__module__': '__main__', 'INPUT_DIR': PosixPath('/Users/francesco/repos/computer_vision_project/src/integration_pipeline/src'), 'OUTPUT_DIR': PosixPath('outputs'), 'MODEL_DIR': PosixPath('/Users/francesco/repos/computer_vision_project/src/mole_bin_classifier/model_saved'), 'METADATA_PATH': '/Users/francesco/repos/computer_vision_project/dataset/mix_dataset/mix_dataset.csv', 'IMAGES_DIR': PosixPath('/Users/francesco/repos/computer_vision_project/src/integration_pipeline/src/cropped_detections'), 'IMBALANCE_FACTOR': 1.1, 'BATCH_SIZE': 64, 'EPOCHS': 1000, 'LEARNING_RATE': 0.001, 'gpus': [], 'mps_devices': [], 'DEVICE': '/CPU:0', '__dict__': <attribute '__dict__' of 'Config' objects>, '__weakref__': <attribute '__weakref__' of 'Config' objects>, '__doc__': None}
+2025-01-15 03:37:15,482 - INFO - Using device: /CPU:0
+2025-01-15 03:37:15,482 - INFO - Preparing datasets...
+2025-01-15 03:37:15,889 - INFO - Original distribution:
+2025-01-15 03:37:15,889 - INFO - Benign samples: 32398
+2025-01-15 03:37:15,889 - INFO - Malignant samples: 10594
+2025-01-15 03:37:15,897 - INFO - Reduced distribution with slight imbalance (factor=1.1):
+2025-01-15 03:37:15,897 - INFO - label
+0    11653
+1    10594
+Name: count, dtype: int64
+2025-01-15 03:37:16,477 - INFO - Starting training...
+2025-01-15 03:37:16,477 - INFO - Starting model training...
+2025-01-15 03:39:16,281 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-01-15 03:39:16,366 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-01-15 03:41:10,704 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-01-15 03:41:10,770 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-01-15 03:43:06,059 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-01-15 03:43:06,121 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-01-15 03:45:00,460 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-01-15 03:45:00,527 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-01-15 03:50:44,765 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-01-15 03:50:44,831 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-01-15 03:52:41,149 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-01-15 03:52:41,216 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-01-15 03:58:30,525 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-01-15 03:58:30,591 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-01-15 04:04:14,432 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-01-15 04:04:14,501 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-01-15 04:06:10,719 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-01-15 04:06:10,793 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-01-15 04:10:02,489 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-01-15 04:10:02,555 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-01-15 04:17:46,072 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-01-15 04:17:46,139 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-01-15 04:33:11,487 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-01-15 04:33:11,552 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-01-15 04:40:51,876 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-01-15 04:40:51,947 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-01-15 05:03:51,521 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-01-15 05:03:51,589 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-01-15 05:22:52,333 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-01-15 05:22:52,403 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-01-15 05:51:38,488 - INFO - Restoring model weights from epoch 54
+2025-01-15 05:51:38,911 - INFO - Early stopping triggered at epoch 69
+2025-01-15 05:51:39,200 - INFO - Evaluating model...
+2025-01-15 05:51:39,200 - INFO - Starting model evaluation...
+2025-01-15 05:52:07,947 - INFO - 
+Test Metrics:
+2025-01-15 05:52:07,948 - INFO - auc: 0.9802
+2025-01-15 05:52:07,948 - INFO - binary_acc: 0.9429
+2025-01-15 05:52:07,948 - INFO - binary_accuracy: 0.9429
+2025-01-15 05:52:07,948 - INFO - loss: 0.1689
+2025-01-15 05:52:07,948 - INFO - pr_auc: 0.9822
+2025-01-15 05:52:07,948 - INFO - precision: 0.9600
+2025-01-15 05:52:07,948 - INFO - recall: 0.9184
+2025-01-15 05:52:08,313 - INFO - 
+Additional Metrics:
+2025-01-15 05:52:08,314 - INFO - ROC AUC Score: 0.9811
+2025-01-15 05:52:08,314 - INFO - PR AUC Score: 0.9835
+2025-01-15 05:52:08,314 - INFO - 
+Class-wise Metrics:
+2025-01-15 05:52:08,314 - INFO - Sensitivity (True Positive Rate): 0.9184
+2025-01-15 05:52:08,314 - INFO - Specificity (True Negative Rate): 0.9653
+2025-01-15 05:52:08,314 - INFO - Precision: 0.9600
+2025-01-15 05:52:08,314 - INFO - Saving models...
+2025-01-15 05:52:08,314 - INFO - Saving H5 model to: /Users/francesco/repos/computer_vision_project/src/mole_bin_classifier/model_saved/skc_model.h5
+2025-01-15 05:52:08,314 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-01-15 05:52:08,385 - INFO - H5 model saved successfully. File size: 20.31 MB
+2025-01-15 05:52:08,385 - INFO - H5 model saved successfully
+2025-01-15 05:52:08,385 - INFO - Saving and converting TFLite model to: /Users/francesco/repos/computer_vision_project/src/mole_bin_classifier/model_saved/skc_model.tflite
+2025-01-15 05:52:08,555 - WARNING - Please consider providing the trackable_obj argument in the from_concrete_functions. Providing without the trackable_obj argument is deprecated and it will use the deprecated conversion path.
+2025-01-15 05:52:08,896 - INFO - Using new converter: If you encounter a problem please file a bug. You can opt-out by setting experimental_new_converter=False
+2025-01-15 05:52:09,151 - INFO - TFLite model saved successfully. File size: 3.36 MB
+2025-01-15 05:52:09,151 - INFO - TFLite model saved successfully
+2025-01-15 05:52:09,153 - INFO - Training completed successfully!

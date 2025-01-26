@@ -1,0 +1,299 @@
+2025-01-14 14:33:36,256 - INFO - Starting training with configuration: {'__module__': '__main__', 'INPUT_DIR': PosixPath('/Users/francesco/repos/computer_vision_project/dataset/mix_dataset'), 'OUTPUT_DIR': PosixPath('outputs'), 'MODEL_DIR': PosixPath('/Users/francesco/Repository/computer_vision_project/saved_models'), 'METADATA_PATH': PosixPath('/Users/francesco/repos/computer_vision_project/dataset/mix_dataset/mix_dataset.csv'), 'IMAGES_DIR': PosixPath('/Users/francesco/repos/computer_vision_project/dataset/mix_dataset/all_images'), 'IMBALANCE_FACTOR': 1.2, 'BATCH_SIZE': 128, 'EPOCHS': 3, 'LEARNING_RATE': 0.001, 'gpus': [], 'mps_devices': [], 'DEVICE': '/CPU:0', '__dict__': <attribute '__dict__' of 'Config' objects>, '__weakref__': <attribute '__weakref__' of 'Config' objects>, '__doc__': None}
+2025-01-14 14:33:36,256 - INFO - Using device: /CPU:0
+2025-01-14 14:33:36,256 - INFO - Preparing datasets...
+2025-01-14 14:33:37,017 - INFO - Original distribution:
+2025-01-14 14:33:37,017 - INFO - Benign samples: 32541
+2025-01-14 14:33:37,017 - INFO - Malignant samples: 10599
+2025-01-14 14:33:37,025 - INFO - Reduced distribution with slight imbalance (factor=1.2):
+2025-01-14 14:33:37,025 - INFO - label
+0    12718
+1    10599
+Name: count, dtype: int64
+2025-01-14 14:33:37,603 - INFO - Starting training...
+2025-01-14 14:33:37,603 - ERROR - Error during execution: train_model() got an unexpected keyword argument 'model_name'
+Traceback (most recent call last):
+  File "/Users/francesco/repos/computer_vision_project/src/mole_bin_classifier/main.py", line 133, in main
+    history, best_model_path = train_model(
+TypeError: train_model() got an unexpected keyword argument 'model_name'
+2025-01-14 14:35:39,624 - INFO - Starting training with configuration: {'__module__': '__main__', 'INPUT_DIR': PosixPath('/Users/francesco/repos/computer_vision_project/dataset/mix_dataset'), 'OUTPUT_DIR': PosixPath('outputs'), 'MODEL_DIR': PosixPath('/Users/francesco/Repository/computer_vision_project/saved_models'), 'METADATA_PATH': PosixPath('/Users/francesco/repos/computer_vision_project/dataset/mix_dataset/mix_dataset.csv'), 'IMAGES_DIR': PosixPath('/Users/francesco/repos/computer_vision_project/dataset/mix_dataset/all_images'), 'IMBALANCE_FACTOR': 1.2, 'BATCH_SIZE': 128, 'EPOCHS': 3, 'LEARNING_RATE': 0.001, 'gpus': [], 'mps_devices': [], 'DEVICE': '/CPU:0', '__dict__': <attribute '__dict__' of 'Config' objects>, '__weakref__': <attribute '__weakref__' of 'Config' objects>, '__doc__': None}
+2025-01-14 14:35:39,624 - INFO - Using device: /CPU:0
+2025-01-14 14:35:39,624 - INFO - Preparing datasets...
+2025-01-14 14:35:40,208 - INFO - Original distribution:
+2025-01-14 14:35:40,208 - INFO - Benign samples: 32541
+2025-01-14 14:35:40,208 - INFO - Malignant samples: 10599
+2025-01-14 14:35:40,216 - INFO - Reduced distribution with slight imbalance (factor=1.2):
+2025-01-14 14:35:40,217 - INFO - label
+0    12718
+1    10599
+Name: count, dtype: int64
+2025-01-14 14:35:40,800 - INFO - Starting training...
+2025-01-14 14:35:40,800 - INFO - Starting model training...
+2025-01-14 14:35:40,803 - ERROR - Error during execution: ModelCheckpoint.__init__() got an unexpected keyword argument 'period'
+Traceback (most recent call last):
+  File "/Users/francesco/repos/computer_vision_project/src/mole_bin_classifier/main.py", line 133, in main
+    history, best_model_path = train_model(
+  File "/Users/francesco/repos/computer_vision_project/src/mole_bin_classifier/train.py", line 139, in train_model
+    callbacks = create_callbacks(Path(checkpoint_dir))
+  File "/Users/francesco/repos/computer_vision_project/src/mole_bin_classifier/train.py", line 67, in create_callbacks
+    tf.keras.callbacks.ModelCheckpoint(
+TypeError: ModelCheckpoint.__init__() got an unexpected keyword argument 'period'
+2025-01-14 14:38:38,478 - INFO - Starting training with configuration: {'__module__': '__main__', 'INPUT_DIR': PosixPath('/Users/francesco/repos/computer_vision_project/dataset/mix_dataset'), 'OUTPUT_DIR': PosixPath('outputs'), 'MODEL_DIR': PosixPath('/Users/francesco/Repository/computer_vision_project/saved_models'), 'METADATA_PATH': PosixPath('/Users/francesco/repos/computer_vision_project/dataset/mix_dataset/mix_dataset.csv'), 'IMAGES_DIR': PosixPath('/Users/francesco/repos/computer_vision_project/dataset/mix_dataset/all_images'), 'IMBALANCE_FACTOR': 1.2, 'BATCH_SIZE': 128, 'EPOCHS': 3, 'LEARNING_RATE': 0.001, 'gpus': [], 'mps_devices': [], 'DEVICE': '/CPU:0', '__dict__': <attribute '__dict__' of 'Config' objects>, '__weakref__': <attribute '__weakref__' of 'Config' objects>, '__doc__': None}
+2025-01-14 14:38:38,478 - INFO - Using device: /CPU:0
+2025-01-14 14:38:38,479 - INFO - Preparing datasets...
+2025-01-14 14:38:38,941 - INFO - Original distribution:
+2025-01-14 14:38:38,941 - INFO - Benign samples: 32541
+2025-01-14 14:38:38,941 - INFO - Malignant samples: 10599
+2025-01-14 14:38:38,949 - INFO - Reduced distribution with slight imbalance (factor=1.2):
+2025-01-14 14:38:38,949 - INFO - label
+0    12718
+1    10599
+Name: count, dtype: int64
+2025-01-14 14:38:39,526 - INFO - Starting training...
+2025-01-14 14:38:39,526 - INFO - Starting model training...
+2025-01-14 14:42:06,400 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-01-14 14:42:06,480 - ERROR - Error during execution: 'Failed to format this callback filepath: "outputs/checkpoints/best_model_epoch_{epoch:02d}_val_loss{val_loss;.4f}.h5". Reason: \'val_loss;\''
+Traceback (most recent call last):
+  File "/Users/francesco/repos/computer_vision_project/src/mole_bin_classifier/main.py", line 133, in main
+    history, best_model_path = train_model(
+  File "/Users/francesco/repos/computer_vision_project/src/mole_bin_classifier/train.py", line 141, in train_model
+    history = model.fit(
+  File "/opt/anaconda3/envs/cvproj/lib/python3.10/site-packages/keras/src/utils/traceback_utils.py", line 122, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "/opt/anaconda3/envs/cvproj/lib/python3.10/site-packages/keras/src/callbacks/model_checkpoint.py", line 326, in _get_file_path
+    raise KeyError(
+KeyError: 'Failed to format this callback filepath: "outputs/checkpoints/best_model_epoch_{epoch:02d}_val_loss{val_loss;.4f}.h5". Reason: \'val_loss;\''
+2025-01-14 14:44:05,215 - INFO - Starting training with configuration: {'__module__': '__main__', 'INPUT_DIR': PosixPath('/Users/francesco/repos/computer_vision_project/dataset/mix_dataset'), 'OUTPUT_DIR': PosixPath('outputs'), 'MODEL_DIR': PosixPath('/Users/francesco/Repository/computer_vision_project/saved_models'), 'METADATA_PATH': PosixPath('/Users/francesco/repos/computer_vision_project/dataset/mix_dataset/mix_dataset.csv'), 'IMAGES_DIR': PosixPath('/Users/francesco/repos/computer_vision_project/dataset/mix_dataset/all_images'), 'IMBALANCE_FACTOR': 1.2, 'BATCH_SIZE': 128, 'EPOCHS': 3, 'LEARNING_RATE': 0.001, 'gpus': [], 'mps_devices': [], 'DEVICE': '/CPU:0', '__dict__': <attribute '__dict__' of 'Config' objects>, '__weakref__': <attribute '__weakref__' of 'Config' objects>, '__doc__': None}
+2025-01-14 14:44:05,215 - INFO - Using device: /CPU:0
+2025-01-14 14:44:05,216 - INFO - Preparing datasets...
+2025-01-14 14:44:05,672 - INFO - Original distribution:
+2025-01-14 14:44:05,672 - INFO - Benign samples: 32541
+2025-01-14 14:44:05,672 - INFO - Malignant samples: 10599
+2025-01-14 14:44:05,680 - INFO - Reduced distribution with slight imbalance (factor=1.2):
+2025-01-14 14:44:05,681 - INFO - label
+0    12718
+1    10599
+Name: count, dtype: int64
+2025-01-14 14:44:06,260 - INFO - Starting training...
+2025-01-14 14:44:06,260 - INFO - Starting model training...
+2025-01-14 14:47:35,501 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-01-14 14:47:35,589 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-01-14 14:54:35,380 - ERROR - Error during execution: cannot unpack non-iterable History object
+Traceback (most recent call last):
+  File "/Users/francesco/repos/computer_vision_project/src/mole_bin_classifier/main.py", line 133, in main
+    history, best_model_path = train_model(
+TypeError: cannot unpack non-iterable History object
+2025-01-14 15:02:39,413 - INFO - Starting training with configuration: {'__module__': '__main__', 'INPUT_DIR': PosixPath('/Users/francesco/repos/computer_vision_project/dataset/mix_dataset'), 'OUTPUT_DIR': PosixPath('outputs'), 'MODEL_DIR': PosixPath('/Users/francesco/Repository/computer_vision_project/saved_models'), 'METADATA_PATH': PosixPath('/Users/francesco/repos/computer_vision_project/dataset/mix_dataset/mix_dataset.csv'), 'IMAGES_DIR': PosixPath('/Users/francesco/repos/computer_vision_project/dataset/mix_dataset/all_images'), 'IMBALANCE_FACTOR': 1.2, 'BATCH_SIZE': 128, 'EPOCHS': 3, 'LEARNING_RATE': 0.001, 'gpus': [], 'mps_devices': [], 'DEVICE': '/CPU:0', '__dict__': <attribute '__dict__' of 'Config' objects>, '__weakref__': <attribute '__weakref__' of 'Config' objects>, '__doc__': None}
+2025-01-14 15:02:39,413 - INFO - Using device: /CPU:0
+2025-01-14 15:02:39,413 - INFO - Preparing datasets...
+2025-01-14 15:02:39,960 - INFO - Original distribution:
+2025-01-14 15:02:39,967 - INFO - Benign samples: 32541
+2025-01-14 15:02:39,967 - INFO - Malignant samples: 10599
+2025-01-14 15:02:39,976 - INFO - Reduced distribution with slight imbalance (factor=1.2):
+2025-01-14 15:02:39,976 - INFO - label
+0    12718
+1    10599
+Name: count, dtype: int64
+2025-01-14 15:02:40,590 - INFO - Starting training...
+2025-01-14 15:02:40,590 - INFO - Starting model training...
+2025-01-14 15:06:15,925 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-01-14 15:06:16,010 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-01-14 15:10:04,016 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-01-14 15:10:04,084 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-01-14 15:13:38,884 - INFO - Evaluating model...
+2025-01-14 15:13:38,884 - INFO - Starting model evaluation...
+2025-01-14 15:14:50,995 - INFO - 
+Test Metrics:
+2025-01-14 15:14:50,997 - INFO - binary_accuracy: 0.5455
+2025-01-14 15:14:50,997 - INFO - loss: 0.8024
+2025-01-14 15:14:51,366 - INFO - 
+Additional Metrics:
+2025-01-14 15:14:51,366 - INFO - ROC AUC Score: 0.8849
+2025-01-14 15:14:51,366 - INFO - PR AUC Score: 0.8044
+2025-01-14 15:14:51,366 - INFO - 
+Class-wise Metrics:
+2025-01-14 15:14:51,366 - INFO - Sensitivity (True Positive Rate): 0.0000
+2025-01-14 15:14:51,366 - INFO - Specificity (True Negative Rate): 1.0000
+2025-01-14 15:14:51,367 - INFO - Precision: nan
+2025-01-14 15:14:51,367 - INFO - Saving models...
+2025-01-14 15:14:51,367 - INFO - Saving H5 model to: /Users/francesco/Repository/computer_vision_project/saved_models/skc_model.h5
+2025-01-14 15:14:51,367 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-01-14 15:14:51,440 - INFO - H5 model saved successfully. File size: 20.31 MB
+2025-01-14 15:14:51,440 - INFO - H5 model saved successfully
+2025-01-14 15:14:51,440 - INFO - Saving and converting TFLite model to: /Users/francesco/Repository/computer_vision_project/saved_models/skc_model.h5
+2025-01-14 15:14:51,608 - WARNING - Please consider providing the trackable_obj argument in the from_concrete_functions. Providing without the trackable_obj argument is deprecated and it will use the deprecated conversion path.
+2025-01-14 15:14:52,031 - INFO - Using new converter: If you encounter a problem please file a bug. You can opt-out by setting experimental_new_converter=False
+2025-01-14 15:14:52,271 - INFO - TFLite model saved successfully. File size: 3.36 MB
+2025-01-14 15:14:52,271 - INFO - TFLite model saved successfully
+2025-01-14 15:14:52,272 - INFO - Training completed successfully!
+2025-01-14 15:28:47,313 - INFO - Starting training with configuration: {'__module__': '__main__', 'INPUT_DIR': PosixPath('/Users/francesco/repos/computer_vision_project/dataset/mix_dataset'), 'OUTPUT_DIR': PosixPath('outputs'), 'MODEL_DIR': PosixPath('/Users/francesco/repos/computer_vision_project/src/mole_bin_classifier/model_saved'), 'METADATA_PATH': PosixPath('/Users/francesco/repos/computer_vision_project/dataset/mix_dataset/mix_dataset.csv'), 'IMAGES_DIR': PosixPath('/Users/francesco/repos/computer_vision_project/dataset/mix_dataset/all_images'), 'IMBALANCE_FACTOR': 1.2, 'BATCH_SIZE': 128, 'EPOCHS': 1, 'LEARNING_RATE': 0.001, 'gpus': [], 'mps_devices': [], 'DEVICE': '/CPU:0', '__dict__': <attribute '__dict__' of 'Config' objects>, '__weakref__': <attribute '__weakref__' of 'Config' objects>, '__doc__': None}
+2025-01-14 15:28:47,313 - INFO - Using device: /CPU:0
+2025-01-14 15:28:47,314 - INFO - Preparing datasets...
+2025-01-14 15:28:48,158 - INFO - Original distribution:
+2025-01-14 15:28:48,158 - INFO - Benign samples: 32541
+2025-01-14 15:28:48,158 - INFO - Malignant samples: 10599
+2025-01-14 15:28:48,165 - INFO - Reduced distribution with slight imbalance (factor=1.2):
+2025-01-14 15:28:48,166 - INFO - label
+0    12718
+1    10599
+Name: count, dtype: int64
+2025-01-14 15:28:48,744 - INFO - Starting training...
+2025-01-14 15:28:48,744 - INFO - Starting model training...
+2025-01-14 15:32:19,589 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-01-14 15:32:19,678 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-01-14 15:32:20,397 - INFO - Evaluating model...
+2025-01-14 15:32:20,397 - INFO - Starting model evaluation...
+2025-01-14 15:33:30,465 - INFO - 
+Test Metrics:
+2025-01-14 15:33:30,467 - INFO - binary_accuracy: 0.5455
+2025-01-14 15:33:30,467 - INFO - loss: 0.7174
+2025-01-14 15:33:30,827 - INFO - 
+Additional Metrics:
+2025-01-14 15:33:30,827 - INFO - ROC AUC Score: 0.8203
+2025-01-14 15:33:30,827 - INFO - PR AUC Score: 0.7200
+2025-01-14 15:33:30,828 - INFO - 
+Class-wise Metrics:
+2025-01-14 15:33:30,828 - INFO - Sensitivity (True Positive Rate): 0.0000
+2025-01-14 15:33:30,828 - INFO - Specificity (True Negative Rate): 1.0000
+2025-01-14 15:33:30,828 - INFO - Precision: nan
+2025-01-14 15:33:30,829 - INFO - Saving models...
+2025-01-14 15:33:30,829 - INFO - Saving H5 model to: /Users/francesco/repos/computer_vision_project/src/mole_bin_classifier/model_saved/skc_model.h5
+2025-01-14 15:33:30,829 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-01-14 15:33:30,898 - INFO - H5 model saved successfully. File size: 20.31 MB
+2025-01-14 15:33:30,899 - INFO - H5 model saved successfully
+2025-01-14 15:33:30,899 - INFO - Saving and converting TFLite model to: /Users/francesco/repos/computer_vision_project/src/mole_bin_classifier/model_saved/skc_model.h5
+2025-01-14 15:33:31,068 - WARNING - Please consider providing the trackable_obj argument in the from_concrete_functions. Providing without the trackable_obj argument is deprecated and it will use the deprecated conversion path.
+2025-01-14 15:33:31,495 - INFO - Using new converter: If you encounter a problem please file a bug. You can opt-out by setting experimental_new_converter=False
+2025-01-14 15:33:31,735 - INFO - TFLite model saved successfully. File size: 3.36 MB
+2025-01-14 15:33:31,735 - INFO - TFLite model saved successfully
+2025-01-14 15:33:31,736 - INFO - Training completed successfully!
+2025-01-14 15:50:23,772 - INFO - Starting training with configuration: {'__module__': '__main__', 'INPUT_DIR': PosixPath('/Users/francesco/repos/computer_vision_project/dataset/mix_dataset'), 'OUTPUT_DIR': PosixPath('outputs'), 'MODEL_DIR': PosixPath('/Users/francesco/repos/computer_vision_project/src/mole_bin_classifier/model_saved'), 'METADATA_PATH': PosixPath('/Users/francesco/repos/computer_vision_project/dataset/mix_dataset/mix_dataset.csv'), 'IMAGES_DIR': PosixPath('/Users/francesco/repos/computer_vision_project/dataset/mix_dataset/all_images'), 'IMBALANCE_FACTOR': 1.2, 'BATCH_SIZE': 128, 'EPOCHS': 1, 'LEARNING_RATE': 0.001, 'gpus': [], 'mps_devices': [], 'DEVICE': '/CPU:0', '__dict__': <attribute '__dict__' of 'Config' objects>, '__weakref__': <attribute '__weakref__' of 'Config' objects>, '__doc__': None}
+2025-01-14 15:50:23,772 - INFO - Using device: /CPU:0
+2025-01-14 15:50:23,772 - INFO - Preparing datasets...
+2025-01-14 15:50:24,624 - INFO - Original distribution:
+2025-01-14 15:50:24,625 - INFO - Benign samples: 32541
+2025-01-14 15:50:24,625 - INFO - Malignant samples: 10599
+2025-01-14 15:50:24,632 - INFO - Reduced distribution with slight imbalance (factor=1.2):
+2025-01-14 15:50:24,633 - INFO - label
+0    12718
+1    10599
+Name: count, dtype: int64
+2025-01-14 15:50:25,213 - INFO - Starting training...
+2025-01-14 15:50:25,213 - INFO - Starting model training...
+2025-01-14 15:53:53,217 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-01-14 15:53:53,305 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-01-14 15:53:54,012 - INFO - Evaluating model...
+2025-01-14 15:53:54,012 - INFO - Starting model evaluation...
+2025-01-14 15:55:06,251 - INFO - 
+Test Metrics:
+2025-01-14 15:55:06,252 - INFO - binary_accuracy: 0.5455
+2025-01-14 15:55:06,252 - INFO - loss: 0.6987
+2025-01-14 15:55:06,607 - INFO - 
+Additional Metrics:
+2025-01-14 15:55:06,607 - INFO - ROC AUC Score: 0.8860
+2025-01-14 15:55:06,607 - INFO - PR AUC Score: 0.8715
+2025-01-14 15:55:06,607 - INFO - 
+Class-wise Metrics:
+2025-01-14 15:55:06,607 - INFO - Sensitivity (True Positive Rate): 0.0000
+2025-01-14 15:55:06,607 - INFO - Specificity (True Negative Rate): 1.0000
+2025-01-14 15:55:06,607 - INFO - Precision: nan
+2025-01-14 15:55:06,608 - INFO - Saving models...
+2025-01-14 15:55:06,608 - INFO - Saving H5 model to: /Users/francesco/repos/computer_vision_project/src/mole_bin_classifier/model_saved/skc_model.h5
+2025-01-14 15:55:06,608 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-01-14 15:55:06,680 - INFO - H5 model saved successfully. File size: 20.31 MB
+2025-01-14 15:55:06,680 - INFO - H5 model saved successfully
+2025-01-14 15:55:06,680 - INFO - Saving and converting TFLite model to: /Users/francesco/repos/computer_vision_project/src/mole_bin_classifier/model_saved/skc_model.tflite
+2025-01-14 15:55:06,866 - WARNING - Please consider providing the trackable_obj argument in the from_concrete_functions. Providing without the trackable_obj argument is deprecated and it will use the deprecated conversion path.
+2025-01-14 15:55:07,308 - INFO - Using new converter: If you encounter a problem please file a bug. You can opt-out by setting experimental_new_converter=False
+2025-01-14 15:55:07,554 - INFO - TFLite model saved successfully. File size: 3.36 MB
+2025-01-14 15:55:07,554 - INFO - TFLite model saved successfully
+2025-01-14 15:55:07,555 - INFO - Training completed successfully!
+2025-01-14 16:03:14,596 - INFO - Starting training with configuration: {'__module__': '__main__', 'INPUT_DIR': PosixPath('/Users/francesco/repos/computer_vision_project/dataset/mix_dataset'), 'OUTPUT_DIR': PosixPath('outputs'), 'MODEL_DIR': PosixPath('/Users/francesco/repos/computer_vision_project/src/mole_bin_classifier/model_saved'), 'METADATA_PATH': PosixPath('/Users/francesco/repos/computer_vision_project/dataset/mix_dataset/mix_dataset.csv'), 'IMAGES_DIR': PosixPath('/Users/francesco/repos/computer_vision_project/dataset/mix_dataset/all_images'), 'IMBALANCE_FACTOR': 1.2, 'BATCH_SIZE': 64, 'EPOCHS': 1000, 'LEARNING_RATE': 0.001, 'gpus': [], 'mps_devices': [], 'DEVICE': '/CPU:0', '__dict__': <attribute '__dict__' of 'Config' objects>, '__weakref__': <attribute '__weakref__' of 'Config' objects>, '__doc__': None}
+2025-01-14 16:03:14,596 - INFO - Using device: /CPU:0
+2025-01-14 16:03:14,597 - INFO - Preparing datasets...
+2025-01-14 16:03:15,050 - INFO - Original distribution:
+2025-01-14 16:03:15,050 - INFO - Benign samples: 32541
+2025-01-14 16:03:15,050 - INFO - Malignant samples: 10599
+2025-01-14 16:03:15,059 - INFO - Reduced distribution with slight imbalance (factor=1.2):
+2025-01-14 16:03:15,059 - INFO - label
+0    12718
+1    10599
+Name: count, dtype: int64
+2025-01-14 16:03:15,652 - INFO - Starting training...
+2025-01-14 16:03:15,652 - INFO - Starting model training...
+2025-01-14 16:03:18,266 - ERROR - Error during execution: FBetaScore expects 2D inputs with shape (batch_size, output_dim). Received input shapes: y_pred.shape=(None, 1) and y_true.shape=(None,).
+Traceback (most recent call last):
+  File "/Users/francesco/repos/computer_vision_project/src/mole_bin_classifier/main.py", line 133, in main
+    history = train_model(
+  File "/Users/francesco/repos/computer_vision_project/src/mole_bin_classifier/train.py", line 151, in train_model
+    history = model.fit(
+  File "/opt/anaconda3/envs/cvproj/lib/python3.10/site-packages/keras/src/utils/traceback_utils.py", line 122, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "/opt/anaconda3/envs/cvproj/lib/python3.10/site-packages/keras/src/metrics/f_score_metrics.py", line 124, in _build
+    raise ValueError(
+ValueError: FBetaScore expects 2D inputs with shape (batch_size, output_dim). Received input shapes: y_pred.shape=(None, 1) and y_true.shape=(None,).
+2025-01-14 16:04:36,321 - INFO - Starting training with configuration: {'__module__': '__main__', 'INPUT_DIR': PosixPath('/Users/francesco/repos/computer_vision_project/dataset/mix_dataset'), 'OUTPUT_DIR': PosixPath('outputs'), 'MODEL_DIR': PosixPath('/Users/francesco/repos/computer_vision_project/src/mole_bin_classifier/model_saved'), 'METADATA_PATH': PosixPath('/Users/francesco/repos/computer_vision_project/dataset/mix_dataset/mix_dataset.csv'), 'IMAGES_DIR': PosixPath('/Users/francesco/repos/computer_vision_project/dataset/mix_dataset/all_images'), 'IMBALANCE_FACTOR': 1.2, 'BATCH_SIZE': 64, 'EPOCHS': 1000, 'LEARNING_RATE': 0.001, 'gpus': [], 'mps_devices': [], 'DEVICE': '/CPU:0', '__dict__': <attribute '__dict__' of 'Config' objects>, '__weakref__': <attribute '__weakref__' of 'Config' objects>, '__doc__': None}
+2025-01-14 16:04:36,321 - INFO - Using device: /CPU:0
+2025-01-14 16:04:36,322 - INFO - Preparing datasets...
+2025-01-14 16:04:36,773 - INFO - Original distribution:
+2025-01-14 16:04:36,773 - INFO - Benign samples: 32541
+2025-01-14 16:04:36,773 - INFO - Malignant samples: 10599
+2025-01-14 16:04:36,781 - INFO - Reduced distribution with slight imbalance (factor=1.2):
+2025-01-14 16:04:36,782 - INFO - label
+0    12718
+1    10599
+Name: count, dtype: int64
+2025-01-14 16:04:37,367 - INFO - Starting training...
+2025-01-14 16:04:37,368 - INFO - Starting model training...
+2025-01-14 16:08:12,201 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-01-14 16:08:12,289 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-01-14 16:11:41,457 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-01-14 16:11:41,524 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-01-14 16:15:08,917 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-01-14 16:15:08,986 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-01-14 16:22:05,273 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-01-14 16:22:05,344 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-01-14 16:29:00,673 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-01-14 16:29:00,746 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-01-14 16:32:28,816 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-01-14 16:32:28,880 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-01-14 16:35:57,419 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-01-14 16:35:57,485 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-01-14 17:03:42,900 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-01-14 17:03:42,963 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-01-14 17:17:37,351 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-01-14 17:17:37,419 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-01-14 17:21:05,837 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-01-14 17:21:05,903 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-01-14 18:13:07,392 - INFO - Restoring model weights from epoch 21
+2025-01-14 18:13:07,806 - INFO - Early stopping triggered at epoch 36
+2025-01-14 18:13:08,034 - INFO - Evaluating model...
+2025-01-14 18:13:08,034 - INFO - Starting model evaluation...
+2025-01-14 18:14:20,222 - INFO - 
+Test Metrics:
+2025-01-14 18:14:20,223 - INFO - auc: 0.9914
+2025-01-14 18:14:20,223 - INFO - binary_acc: 0.9730
+2025-01-14 18:14:20,223 - INFO - binary_accuracy: 0.9730
+2025-01-14 18:14:20,223 - INFO - loss: 0.0878
+2025-01-14 18:14:20,223 - INFO - pr_auc: 0.9916
+2025-01-14 18:14:20,223 - INFO - precision: 0.9945
+2025-01-14 18:14:20,223 - INFO - recall: 0.9458
+2025-01-14 18:14:20,578 - INFO - 
+Additional Metrics:
+2025-01-14 18:14:20,578 - INFO - ROC AUC Score: 0.9921
+2025-01-14 18:14:20,578 - INFO - PR AUC Score: 0.9927
+2025-01-14 18:14:20,578 - INFO - 
+Class-wise Metrics:
+2025-01-14 18:14:20,578 - INFO - Sensitivity (True Positive Rate): 0.9458
+2025-01-14 18:14:20,578 - INFO - Specificity (True Negative Rate): 0.9957
+2025-01-14 18:14:20,578 - INFO - Precision: 0.9945
+2025-01-14 18:14:20,581 - INFO - Saving models...
+2025-01-14 18:14:20,581 - INFO - Saving H5 model to: /Users/francesco/repos/computer_vision_project/src/mole_bin_classifier/model_saved/skc_model.h5
+2025-01-14 18:14:20,581 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-01-14 18:14:20,649 - INFO - H5 model saved successfully. File size: 20.31 MB
+2025-01-14 18:14:20,649 - INFO - H5 model saved successfully
+2025-01-14 18:14:20,649 - INFO - Saving and converting TFLite model to: /Users/francesco/repos/computer_vision_project/src/mole_bin_classifier/model_saved/skc_model.tflite
+2025-01-14 18:14:20,820 - WARNING - Please consider providing the trackable_obj argument in the from_concrete_functions. Providing without the trackable_obj argument is deprecated and it will use the deprecated conversion path.
+2025-01-14 18:14:21,231 - INFO - Using new converter: If you encounter a problem please file a bug. You can opt-out by setting experimental_new_converter=False
+2025-01-14 18:14:21,462 - INFO - TFLite model saved successfully. File size: 3.36 MB
+2025-01-14 18:14:21,462 - INFO - TFLite model saved successfully
+2025-01-14 18:14:21,464 - INFO - Training completed successfully!
