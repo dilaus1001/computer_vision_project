@@ -38,100 +38,6 @@ class _DetectionScreenState extends State<DetectionScreen> {
     }
   }
 
-  // Future<void> _processImage() async {
-  //   setState(() => isProcessing = true);
-    
-  //   try {
-  //     // Capture image
-  //     // final image = await _cameraService.takePicture();
-  //     // if (image == null) return;
-
-  //     // Simulate taking a picture by using a placeholder image
-  //         // Instead of using File directly, we'll create a temporary file from the asset
-  //     final ByteData data = await rootBundle.load('assets/malignant_test_image.jpg');
-  //     final Directory tempDir = await getTemporaryDirectory();
-  //     final String tempPath = '${tempDir.path}/temp_image.jpg';
-  //     final File tempFile = File(tempPath);
-      
-  //     // Write the asset to a temporary file
-  //     await tempFile.writeAsBytes(
-  //       data.buffer.asUint8List(data.offsetInBytes, data.lengthInBytes)
-  //     );
-
-
-  //     // Detect moles
-  //     final moles = await _modelService.detectMoles(File(image.path));
-      
-  //     // Analyze each detected mole
-  //     for (var mole in moles) {
-  //       final malignancyProbability = await _modelService.analyzeMole(
-  //         File(image.path),
-  //         mole,
-  //       );
-        
-  //       // Show results (implement UI feedback)
-  //       _showResults(mole, malignancyProbability);
-  //     }
-  //   } catch (e) {
-  //     print('Error processing image: $e');
-  //   } finally {
-  //     setState(() => isProcessing = false);
-  //   }
-  // }
-
-  // Future<void> _processImage() async {
-  //   setState(() => isProcessing = true);
-    
-  //   try {
-  //     // Capture image
-  //     final image = await _cameraService.takePicture();
-  //     if (image == null) return;
-
-  //     // Simulate taking a picture by using a placeholder image
-  //         // Instead of using File directly, we'll create a temporary file from the asset
-  //     // final ByteData data = await rootBundle.load('assets/malignant_test_image.jpg');
-  //     // final Directory tempDir = await getTemporaryDirectory();
-  //     // final String tempPath = '${tempDir.path}/temp_image.jpg';
-  //     // final File tempFile = File(tempPath);
-      
-  //     // Write the asset to a temporary file
-  //     // await tempFile.writeAsBytes(
-  //     //   data.buffer.asUint8List(data.offsetInBytes, data.lengthInBytes)
-  //     // );
-
-
-  //     // Detect moles
-  //     final tempDir = await getTemporaryDirectory();
-  //     tempFile = File('${tempDir.path}/temp_image.jpg');
-      
-  //     // Write the captured image data to the temp file
-  //     await tempFile!.writeAsBytes(
-  //       image.buffer.asUint8List(image.offsetInBytes, image.lengthInBytes)
-  //     );
-
-  //     final moles = await _modelService.detectMoles(tempFile!);
-      
-  //     // Analyze each detected mole
-  //     for (var mole in moles) {
-  //       final malignancyProbability = await _modelService.analyzeMole(
-  //         tempFile,
-  //         mole,
-  //       );
-        
-  //       // Show results (implement UI feedback)
-  //       _showResults(mole, malignancyProbability);
-  //     }
-
-  //     if (await tempFile.exists()) {
-  //       await tempFile.delete();
-  //   }
-  //   } catch (e) {
-  //     print('Error processing image: $e');
-  //   } finally {
-  //     setState(() => isProcessing = false);
-  //   }
-  // }
-
   Future<void> _processImage() async {
     print('Start image processing ...');
     setState(() => isProcessing = true);
@@ -154,15 +60,16 @@ class _DetectionScreenState extends State<DetectionScreen> {
         imageFile = File(capturedImage.path);
       }
 
-      // Process the image (whether from camera or test asset)
+      // Process the image
       if (imageFile != null) {
         // Detect moles
         print('Starting mole detection');
         final moles = await _modelService.detectMoles(imageFile!);
+        final mergedMoles = _modelService.mergeDetections(moles, 0.5);
         
         // Analyze each detected mole
         print('start mole classification');
-        for (var mole in moles) {
+        for (var mole in mergedMoles) {
           final malignancyProbability = await _modelService.analyzeMole(
             imageFile!,
             mole,

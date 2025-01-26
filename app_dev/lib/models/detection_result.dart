@@ -1,15 +1,13 @@
 import 'dart:math' show Rectangle;
 
 class DetectionResult {
-  // Changed from List<double> to structured properties that clearly represent the box
   final double x;        // x coordinate of top-left corner
   final double y;        // y coordinate of top-left corner
   final double width;    // width of bounding box
   final double height;   // height of bounding box
   final double confidence;  // detection confidence score
-  final String label;      // class label (e.g., "mole", "skin lesion")
+  final String label;      // class label
 
-  // Constructor that takes all required values
   DetectionResult({
     required this.x,
     required this.y,
@@ -43,7 +41,7 @@ class DetectionResult {
     required double width,
     required double height,
     required double confidence,
-    String label = 'mole',  // Default label if not specified
+    String label = 'mole',
   }) {
     // Convert from center coordinates to top-left coordinates
     final x = centerX - width / 2;
@@ -59,7 +57,6 @@ class DetectionResult {
     );
   }
 
-  // String representation for debugging
   @override
   String toString() {
     return 'DetectionResult(x: $x, y: $y, width: $width, height: $height, '
