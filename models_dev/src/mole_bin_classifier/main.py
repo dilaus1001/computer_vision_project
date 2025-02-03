@@ -84,8 +84,10 @@ def save_models(model, h5_path, tflite_path):
             tf.TensorSpec(input_shape, tf.float32))
         
         converter = tf.lite.TFLiteConverter.from_concrete_functions([concrete_func])
-        converter.optimizations = [tf.lite.Optimize.DEFAULT]
-        converter.target_spec.supported_types = [tf.float16]
+        converter.target_spec.supported_ops = [
+            tf.lite.OpsSet.TFLITE_BUILTINS,  
+            tf.lite.OpsSet.SELECT_TF_OPS     
+]
         tflite_model = converter.convert()
 
         with open(tflite_path, 'wb') as f:
