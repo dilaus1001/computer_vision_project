@@ -65,17 +65,16 @@ class _DetectionScreenState extends State<DetectionScreen> {
         // Detect moles
         print('Starting mole detection');
         final moles = await _modelService.detectMoles(imageFile!);
-        final mergedMoles = _modelService.mergeDetections(moles, 0.5);
         
         // Analyze each detected mole
         print('start mole classification');
-        for (var mole in mergedMoles) {
-          final malignancyProbability = await _modelService.analyzeMole(
+        for (var mole in moles) {
+          final benignProbability = await _modelService.analyzeMole(
             imageFile!,
             mole,
           );
           // Show results
-          _showResults(mole, malignancyProbability);
+          _showResults(mole, benignProbability);
         }
 
         // Clean up the file after processing
@@ -106,7 +105,7 @@ void _showResults(DetectionResult mole, double probability) {
           ),
           SizedBox(height: 8),
           Text(
-            'Malignancy Probability: ${(probability * 100).toStringAsFixed(1)}%',
+            'Malignant Probability: ${(probability * 100).toStringAsFixed(1)}%',
             style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
           ),
         ],

@@ -37,11 +37,13 @@ dependencies:
   path_provider: ^2.1.1   # For handling file paths
   permission_handler: ^11.0.1  # For handling permissions
   material_design_icons_flutter: ^7.0.7296
+  csv: ^5.0.1
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
   ultralytics_yolo: ^0.0.3
+  flutter_vision: ^1.1.4
 
 dev_dependencies:
   flutter_test:
